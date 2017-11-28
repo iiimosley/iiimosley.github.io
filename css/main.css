@@ -1,0 +1,140 @@
+body {
+    color: white;
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+
+
+/**header**/
+
+h2 {
+    font-family: 'Timmana', Helvetica, Arial, sans-serif;
+    text-shadow: 2px 2px #212121;
+    padding-top: 4em;
+    margin: 0 auto 3em auto;
+    border-bottom: 4px double white; 
+    border-bottom-left-radius: 22%;
+    letter-spacing: .2em;
+    background: repeating-radial-gradient(circle at 0 200%, #cc7700, #764100 25px, #20c3ff 55px);
+}
+
+.indent {
+    position: relative;
+    left: 120px;
+}
+
+
+/**navbar**/
+
+nav {
+    margin: 3em auto 5em auto;
+}
+
+.flexNav {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+}
+
+.flexNav li {
+    width: 90%;
+    list-style-type: none;
+    flex-grow: 1;
+    padding: .5em 2em;
+    justify-content: space-around;
+    border-bottom: 2px solid white;
+    text-align: center;
+}
+
+.flexNav a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.flexNav a:hover {
+    font-weight: 600;
+    letter-spacing: .4em;
+    animation-name: linkHover;
+    animation-duration: .3s;
+    animation-timing-function: ease-out;
+    text-decoration: underline overline;
+}
+
+@keyframes linkHover {
+    from {font-weight: normal;
+        letter-spacing: 0;
+        text-decoration: none;}
+    to {font-weight: 600;
+        letter-spacing: .4em;
+        text-decoration: underline overline;}
+}
+
+.flexNav a::after {
+    animation-name: linkReturn;
+    animation-duration: .3s;
+}
+
+@keyframes linkReturn {
+    from {font-weight: 600;
+        letter-spacing: .4em;
+        text-decoration: underline overline;}
+    to {font-weight: normal;
+        letter-spacing: 0;
+        text-decoration: none;}
+}
+
+/**main body**/
+
+
+h1 {
+    font-weight: 300;
+    margin: 0 auto 1.5em;
+    text-align: center;
+    border-bottom: 1px double white;
+}
+
+.mainBody {
+    width: 62%;
+    float: left;
+}
+
+main img {
+    margin: 3em auto;
+}
+
+aside {
+    width: 34%;
+    float: right;
+    font-size: .8em;
+    text-align: justify;
+}
+
+aside h3 {
+    font-size: 1.5em;
+}
+
+.container {
+    width: 87%;
+    margin: 0 auto;
+}
+
+/**footer**/
+
+footer {
+    clear: both;
+    float: right;
+    margin-top: 3em;
+}
+
+footer p {
+    margin-top: 0;
+}
+
+/**anchors**/
+
+a {
+    color: white;
+}
+
