@@ -46,7 +46,7 @@
 } */
 
 .item p {
-    font-size: 1.2em;
+    font-size: 1.6vw;
 }
 
 .item p, .item img {
@@ -54,8 +54,8 @@
 }
 
 .item img {
-    width: 2em;
-    height: 2em;
+    width: 50%;
+    height: auto;
 }
 
 #iconCredit {
