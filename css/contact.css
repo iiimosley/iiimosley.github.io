@@ -15,12 +15,22 @@
 }
 
 .item {
+    cursor: pointer;
     display: grid;
     align-self: stretch;
     justify-self: stretch;
     background-color: rgba(128,128,128,.3);
     border: .2em double darkslategrey;
     border-radius: .3em;
+    transition: background-color 1s;
+}
+
+.item:hover {
+    background-color: rgba(104, 118, 129,.8);
+}
+
+.item img:hover {
+    fill: white;
 }
 
 /* .item:nth-child(3n+1) {
