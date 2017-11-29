@@ -6,7 +6,6 @@ body {
     margin: 0;
 }
 
-
 /**header**/
 
 h2 {
@@ -24,7 +23,6 @@ h2 {
     position: relative;
     left: 120px;
 }
-
 
 /**navbar**/
 
@@ -87,7 +85,6 @@ nav {
 
 /**main body**/
 
-
 h1 {
     font-weight: 300;
     margin: 0 auto 1.5em;
@@ -96,8 +93,9 @@ h1 {
 }
 
 .mainBody {
-    width: 62%;
+    width: 56%;
     float: left;
+    margin-bottom: 5em;
 }
 
 main img {
@@ -109,10 +107,14 @@ aside {
     float: right;
     font-size: .8em;
     text-align: justify;
+    line-height: 1.5em;
 }
 
 aside h3 {
     font-size: 1.5em;
+    letter-spacing: .3em;
+    text-align: right; 
+    border-bottom: 1px solid white;
 }
 
 .container {
@@ -125,7 +127,7 @@ aside h3 {
 footer {
     clear: both;
     float: right;
-    margin-top: 3em;
+    margin: 3em 4em 0 0;
 }
 
 footer p {
