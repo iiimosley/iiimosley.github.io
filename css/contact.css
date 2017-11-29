@@ -2,6 +2,14 @@
     box-sizing: inherit;
 }
 
+.contactMain {
+    margin-bottom: 5em;
+}
+
+#contactHeader {
+    width: 80%;
+}
+
 .grid {
     margin: 0 auto;
     max-width: 70%;
@@ -36,6 +44,10 @@
 /* .item:nth-child(3n+1) {
     border-radius: 50%;
 } */
+
+.item p {
+    font-size: 1.2em;
+}
 
 .item p, .item img {
     margin: auto;
