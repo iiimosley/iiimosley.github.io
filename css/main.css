@@ -1,27 +1,49 @@
 body {
-    color: white;
+    color: rgb(253, 248, 229);
     font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-    background-color: black;
+    background-color: rgb(10, 2, 19);
     padding: 0;
     margin: 0;
 }
 
-/**header**/
-
-h2 {
-    font-family: 'Timmana', Helvetica, Arial, sans-serif;
-    text-shadow: 2px 2px #212121;
-    padding-top: 4em;
-    margin: 0 auto 3em auto;
-    border-bottom: 4px double white; 
-    border-bottom-left-radius: 22%;
-    letter-spacing: .2em;
-    background: repeating-radial-gradient(circle at 0 200%, #cc7700, #764100 25px, #20c3ff 55px);
+h1 {
+    font-weight: 300;
+    margin: 0 auto 1.5em;
+    text-align: center;
+    border-bottom: 1px double white;
 }
 
-.indent {
-    position: relative;
-    left: 120px;
+/**header**/
+
+#navHead {
+    font-size: 3vw;
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    font-style: italic;
+    font-weight: 100;
+    text-shadow: 2px 1px #212121;
+    text-align: center;
+    padding: .7em 0;
+    margin: 0 auto .5em auto;
+    border-bottom: .4vw double white; 
+    border-bottom-left-radius: 19%;
+    letter-spacing: .15em;
+    background: repeating-radial-gradient(circle at 0 200%, #e28915 .03vw, #764100 .04vw, #20c3ff .12vw);
+}
+
+ /*repeating-radial-gradient(circle at 0 200%, #e28915, #764100 3.5vw, #20c3ff 7vw),*/ 
+
+
+#nameHead {
+    vertical-align: top;
+    line-height: 7vw;
+}
+
+#slash {
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    font-size: 11vw;
+    margin: 0 -0.1em;
+    vertical-align: bottom;
+    line-height: 1em;
 }
 
 /**navbar**/
@@ -30,13 +52,13 @@ nav {
     margin: 3em auto 5em auto;
 }
 
-.flexNav {
+#flexNav {
     display: flex;
     flex-direction: row;
     padding-left: 0;
 }
 
-.flexNav li {
+#flexNav li {
     width: 90%;
     list-style-type: none;
     flex-grow: 1;
@@ -46,51 +68,20 @@ nav {
     text-align: center;
 }
 
-.flexNav a {
+#flexNav a {
     display: inline-block;
     text-decoration: none;
+    transition: all .3s ease-out;
 }
 
-.flexNav a:hover {
+#flexNav a:hover {
     font-weight: 600;
-    letter-spacing: .4em;
-    animation-name: linkHover;
-    animation-duration: .3s;
-    animation-timing-function: ease-out;
-    text-decoration: underline overline;
+    letter-spacing: .2em;
+    text-shadow: 0 0 4px rgb(34, 32, 32), 0 0 5px rgb(247, 227, 227);
 }
 
-@keyframes linkHover {
-    from {font-weight: normal;
-        letter-spacing: 0;
-        text-decoration: none;}
-    to {font-weight: 600;
-        letter-spacing: .4em;
-        text-decoration: underline overline;}
-}
-
-.flexNav a::after {
-    animation-name: linkReturn;
-    animation-duration: .3s;
-}
-
-@keyframes linkReturn {
-    from {font-weight: 600;
-        letter-spacing: .4em;
-        text-decoration: underline overline;}
-    to {font-weight: normal;
-        letter-spacing: 0;
-        text-decoration: none;}
-}
 
 /**main body**/
-
-h1 {
-    font-weight: 300;
-    margin: 0 auto 1.5em;
-    text-align: center;
-    border-bottom: 1px double white;
-}
 
 .mainBody {
     width: 56%;
@@ -98,11 +89,15 @@ h1 {
     margin-bottom: 5em;
 }
 
-main img {
+.mainBody p {
+    line-height: 1.4em;
+}
+
+.mainBody img {
     margin: 3em auto;
 }
 
-aside {
+.mainAside {
     width: 34%;
     float: right;
     font-size: .8em;
@@ -110,17 +105,102 @@ aside {
     line-height: 1.5em;
 }
 
-aside h3 {
+.mainAside h3 {
     font-size: 1.5em;
     letter-spacing: .3em;
     text-align: right; 
     border-bottom: 1px solid white;
 }
 
-.container {
+.mainContainer {
     width: 87%;
     margin: 0 auto;
 }
+
+/*about*/
+
+.aboutContainer {
+    width: 91%;
+    margin: 0 auto;
+}
+
+.aboutBody {
+    margin-right: 1em;
+    width: 80%
+}
+
+.aboutBody p {
+    line-height: 1.6em;
+    font-weight: 300;
+    margin-left: .4em;
+}
+
+.jokes {
+    font-size: .8em;
+    font-style: italic;
+    letter-spacing: .1em;
+    margin: auto .4em;
+}
+
+.education {
+    width: 40%;
+    float: right;
+    font-size: .9em;
+    line-height: 1.5em;
+    margin: 0 1em 1em 3em;
+    border-bottom: 1px groove white;
+    border-left: 1px groove white;
+    box-shadow: 0 0 10px rgb(247, 247, 176);
+}
+
+.education h3 {
+    font-size: 1.5em;
+    font-weight: 400;
+    letter-spacing: .1vw;
+    text-indent: 1em;
+    margin: .3em auto;
+    padding-top: .3em;  
+    padding-bottom: .6em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.61);
+}
+
+.school {
+    width: 90%;
+    margin: 1em auto 2em 1em;
+}
+
+.education h4 {
+    font-size: 1.2em;
+    font-weight: 300;
+    letter-spacing: .3vw;
+    margin: .3em auto;
+    padding: .2em;
+    border-bottom: 3px double white; 
+}
+
+.education section {
+    margin: .4em auto;
+}
+
+.education p {
+    margin: .7em .6em;
+    padding-left: -1em;
+    list-style: none;
+}
+
+.study {
+    margin-right: .3em;
+    font-weight: 500;
+    font-size: 1.1em;
+    letter-spacing: .2vw;
+}
+
+#lars {
+    display: block;
+    width: 60%;
+    margin: 3em auto;
+}
+
 
 /**footer**/
 
@@ -132,6 +212,7 @@ footer {
 
 footer p {
     margin-top: 0;
+    font-size: .8em;
 }
 
 /**anchors**/
@@ -140,3 +221,10 @@ a {
     color: white;
 }
 
+/**media**/
+
+@media (max-width: 566px) {
+    /* #flexNav {
+        display: none;
+    } */
+}
