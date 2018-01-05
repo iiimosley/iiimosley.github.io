@@ -1,20 +1,13 @@
 let nav = document.querySelector("#navBar");
 let flexNav = document.querySelector("#flexNav");
+let email = document.querySelectorAll(".email");
+let linkedin = document.querySelectorAll(".linkedin");
+let github = document.querySelectorAll(".github");
+let twitter = document.querySelectorAll(".twitter");
 
-if (document.body.clientWidth < 577) {
-    flexNav.style.display = "none";
-    let navDrop = document.createElement('select');
-    navDrop.setAttribute("id", "dropNav");
-    nav.appendChild(navDrop);
-    console.log(navDrop);
-    for (let i = 0; i < flexNav.children.length; i++) {
-        let navOption = document.createElement('option');
-        navOption.innerHTML = flexNav.children[i].innerHTML;
-        navOption.value = flexNav.children[i].firstChild.attributes[0].value
-        console.log(navOption);
-        navDrop.appendChild(navOption);
-    }
-}
+$("#dropDown").click(function () {
+    $("#dropContain").slideToggle(400, "swing");
+})
 
 
 

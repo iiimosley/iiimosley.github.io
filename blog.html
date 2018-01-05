@@ -6,13 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>blog - iiiMosley</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/blog.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i|Timmana" rel="stylesheet">
 </head>
 <body>
     <header>
         <h2 id="navHead"><span id="nameHead">t.mosley</span><span id="slash">/</span><span id="titleHead">multimedia design</span></h2>
-        <nav>
+        <nav id="navBar">
             <ul id="flexNav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -21,6 +20,16 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <div id="dropDown">
+            <h4>Navigation</h4>
+            <div id="dropContain">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="dev.html">Dev</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
     </header>
     <main class="blogLayout">
         <h1>Parlance of Our Times</h1>
@@ -34,6 +43,8 @@
     <footer>
             <p>&copy;TerraWerks 2017</p> 
     </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
