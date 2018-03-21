@@ -1,14 +1,17 @@
-let nav = document.querySelector("#navBar");
-let flexNav = document.querySelector("#flexNav");
-let email = document.querySelectorAll(".email");
-let linkedin = document.querySelectorAll(".linkedin");
-let github = document.querySelectorAll(".github");
-let twitter = document.querySelectorAll(".twitter");
+'use strict';
+
+const $ = require('jquery');
+const Handlebars = require('hbsfy/runtime');
+
+const { aboutView, portfolioView, contactView } = require('./view');
+
 
 $("#dropDown").click(function () {
     $("#dropContain").slideToggle(400, "swing");
-})
+});
 
+$(document).on('click', '#aboutLink, #aboutMobile', aboutView);
 
+$(document).on('click', '#portfolioLink, #portfolioMobile', portfolioView);
 
-// document.querySelector("#flexNav")
+$(document).on('click', '#contactLink, #contactMobile', contactView);
