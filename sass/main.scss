@@ -115,15 +115,15 @@ nav {
 #flexNav a {
     display: inline-block;
     text-decoration: none;
-    transition: all .3s ease-out;
+    transition: all .35s cubic-bezier(0.47, 0, 0.745, 0.715);
     font-size: 1.6em;
 }
 
 #flexNav a:hover {
     font-weight: 400;
-    letter-spacing: .1em;
-    transform: skewX(-15deg);
-    text-shadow: 0 0 4px rgb(34, 32, 32), 0 0 5px rgb(247, 227, 227);
+    letter-spacing: .15em;
+    transform: skewX(-10deg);
+    text-shadow: 0 0 4px rgb(34, 32, 32), 0 0 5px rgb(247, 227, 227), -.3vw .3vw dodgerblue, .3vw -.3vw red;
 }
 
 /**drop down nav**/
@@ -395,7 +395,7 @@ a {
 
 @media (max-width: 577px) {
     .nameHead, .titleHead {
-        font-size: 5vw;
+        font-size: 4.5vw;
     }
     nav {
         display: none;
@@ -426,7 +426,7 @@ a {
     }
     .aboutBody {
         margin: auto;
-        width: 90%
+        width: 95%
     }
     .aboutBody p {
         line-height: 1.6em;
@@ -435,7 +435,7 @@ a {
     }
     .education {
         float: none;
-        width: 90%;
+        width: 95%;
         margin: 2em auto;
     }
     #eduLeft {

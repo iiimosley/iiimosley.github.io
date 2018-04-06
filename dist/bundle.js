@@ -32,30 +32,30 @@ const aboutSection = require('../templates/about.hbs');
 const portfolioSection = require('../templates/portfolio.hbs');
 const contactSection = require('../templates/contact.hbs');
 
-
-module.exports.aboutView = () => {
+const clearAll = () => {
     portfolio.fadeOut();
     portfolio.empty();
     contact.fadeOut();
     contact.empty();
+    about.fadeOut();
+    about.empty();
+};
+
+
+module.exports.aboutView = () => {
+    clearAll();
     about.append(aboutSection);
     about.fadeIn();
 };
 
 module.exports.portfolioView = () => {
-    about.fadeOut();
-    about.empty();
-    contact.fadeOut();
-    contact.empty();
+    clearAll();
     portfolio.append(portfolioSection);
     portfolio.fadeIn();
 };
 
 module.exports.contactView = () => {
-    about.fadeOut();
-    about.empty();
-    portfolio.fadeOut();
-    portfolio.empty();
+    clearAll();
     contact.append(contactSection);
     contact.fadeIn();
 };
