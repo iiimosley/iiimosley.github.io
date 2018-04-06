@@ -16,6 +16,7 @@ h1 {
 /**header**/
 
 #navHead {
+    display: none;
     font-size: 3vw;
     font-family: 'Montserrat', Helvetica, Arial, sans-serif;
     font-style: italic;
@@ -32,27 +33,70 @@ h1 {
 
  /*repeating-radial-gradient(circle at 0 200%, #e28915, #764100 3.5vw, #20c3ff 7vw),*/ 
 
+ #flexHead {
+    font-size: 3vw;
+    margin: 0 0 .7em 0;
+    padding-top: .4em;
+    letter-spacing: .04em;
+    //  border-bottom: .1em dashed white;
+    transform: skewX(-10deg);
+    font-weight: 100;
+    text-align: center;
+    background: radial-gradient(circle at 0 200%, white 7%, lightslategray 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    .slash {
+        background: radial-gradient(circle at 0 200%, white 70%, lightslategray 110%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+ }
 
-#nameHead {
+.nameHead {
     vertical-align: top;
     line-height: 7vw;
 }
 
-#slash {
+.slash {
+    display: inline-block;
     font-family: 'Montserrat', Helvetica, Arial, sans-serif;
     font-size: 11vw;
     margin: 0 -0.1em;
     vertical-align: bottom;
     line-height: 1em;
+    transform: skewX(-30deg);
 }
 
 /**navbar**/
 
 nav {
-    margin: 3em auto 5em auto;
+    margin: 0 auto 2em auto;
+    border-bottom: 2px solid white;
+    background: repeating-radial-gradient(circle at 9%, rgba(0, 0, 0, 0) 12%, rgba(43, 43, 42, 0.945) 15%);
+}
+
+#navPhoto {
+    display: inline-block;
+    width: 20%;
+    padding: .5em;
+    padding-left: 1vw;
+    img {
+        width: 80%;
+        margin: auto;
+        border-radius: 50%;
+        filter: drop-shadow(0 0 1.3vw rgba(255, 255, 255, 0.61)),
+    }
+}
+
+#navLinks {
+    display: inline-block;
+    width: 75%;
 }
 
 #flexNav {
+    margin: 0;
     display: flex;
     flex-direction: row;
     padding-left: 0;
@@ -64,7 +108,7 @@ nav {
     flex-grow: 1;
     padding: .5em 2em;
     justify-content: space-around;
-    border-bottom: 2px solid white;
+    // border-bottom: 2px solid white;
     text-align: center;
 }
 
@@ -72,11 +116,13 @@ nav {
     display: inline-block;
     text-decoration: none;
     transition: all .3s ease-out;
+    font-size: 1.6em;
 }
 
 #flexNav a:hover {
-    font-weight: 600;
-    letter-spacing: .2em;
+    font-weight: 400;
+    letter-spacing: .1em;
+    transform: skewX(-15deg);
     text-shadow: 0 0 4px rgb(34, 32, 32), 0 0 5px rgb(247, 227, 227);
 }
 
@@ -110,8 +156,9 @@ nav {
 #dropContain {
     display: none;
     position: absolute;
-    width: 95.5%;
+    width: 100%;
     left: 0;
+    padding: 0;
     margin: .8em auto 0;
     background: repeating-radial-gradient(circle at 0 200%, #ff8c00 .03vw, #2c241a .04vw, #063546 .12vw);;
     border: 1px solid rgba(158, 158, 158, 0.753);
@@ -156,12 +203,21 @@ nav {
     margin-left: .4em;
 }
 
-.jokes {
-    font-size: .8em;
-    font-style: italic;
-    letter-spacing: .1em;
-    margin: auto .4em;
+.aboutLeft {
+    float: left;
+    width: 80%;
 }
+
+// #eduRight {
+//     display: block;
+// }
+
+// #eduMobile {
+//     display: none;
+//     float: none;
+//     width: 90%;
+//     margin: 2em auto;
+// }
 
 .education {
     width: 40%;
@@ -209,10 +265,18 @@ nav {
     list-style: none;
 }
 
+.education p>span {
+    display: block;
+}
+
+#eduMobile {
+    display: none;
+}
+
 .study {
     margin-right: .3em;
     font-weight: 500;
-    font-size: 1.1em;
+    font-size: 1.2em;
     letter-spacing: .2vw;
 }
 
@@ -240,57 +304,6 @@ footer p {
 
 a {
     color: white;
-}
-
-/**media**/
-
-@media (max-width: 920px) {
-    .education {
-        width: 60%;
-    }
-}
-
-@media (max-width: 577px) {
-    #nameHead, #titleHead {
-        font-size: 5vw;
-    }
-    nav {
-        margin: 3em auto;
-    }
-    #flexNav {
-        display: none;
-    }
-    #dropDown {
-        display: block;
-    }
-    .mainBody {
-        float: none;
-        width: 93%;
-        text-align: justify;
-        margin: 3em auto;
-    }
-    .mainBody p {
-        font-size: .9em;
-    }
-    .mainAside {
-        float: none;
-        width: 93%;
-        margin: 2em auto;
-    }
-    .aboutBody {
-        margin: auto;
-        width: 90%
-    }
-    .aboutBody p {
-        line-height: 1.6em;
-        font-weight: 300;
-        margin-left: .4em;
-    }
-    .education {
-        float: none;
-        width: 90%;
-        margin: 2em auto;
-    }
 }
 
 * {
@@ -372,6 +385,71 @@ a {
     font-size: .7vw;
 }
 
+/**media**/
+
+@media (max-width: 920px) {
+    .education {
+        width: 53%;
+    }
+}
+
+@media (max-width: 577px) {
+    .nameHead, .titleHead {
+        font-size: 5vw;
+    }
+    nav {
+        display: none;
+        margin: 1.3em auto;
+    }
+    #navHead {
+        display: block;
+    }
+    #flexNav {
+        display: none;
+    }
+    #dropDown {
+        display: block;
+    }
+    .mainBody {
+        float: none;
+        width: 93%;
+        text-align: justify;
+        margin: 3em auto;
+    }
+    .mainBody p {
+        font-size: .9em;
+    }
+    .mainAside {
+        float: none;
+        width: 93%;
+        margin: 2em auto;
+    }
+    .aboutBody {
+        margin: auto;
+        width: 90%
+    }
+    .aboutBody p {
+        line-height: 1.6em;
+        font-weight: 300;
+        margin-left: .4em;
+    }
+    .education {
+        float: none;
+        width: 90%;
+        margin: 2em auto;
+    }
+    #eduLeft {
+        display: none;
+    }
+    #eduMobile {
+        display: block;
+    }
+    .aboutLeft {
+        float: none;
+    }
+}
+
+
 @media (max-width: 816px) {
     .grid {
         max-width: 80%;
@@ -395,3 +473,5 @@ a {
         width: 2.5em;
     }
 } 
+
+
