@@ -39,13 +39,27 @@ h1 {
   background: radial-gradient(circle at 0 200%, white 7%, lightslategray 100%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
+  -webkit-text-fill-color: transparent;
+  transition: all .7s; }
   #flexHead .slash {
     background: radial-gradient(circle at 0 200%, white 70%, lightslategray 110%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
+  #flexHead:hover {
+    letter-spacing: .1em;
+    background: repeating-radial-gradient(circle at 0 200%, #e28915 0.3vw, #764100 0.4vw, #20c3ff 1.2vw);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    animation: stripeMove 40s linear infinite; }
 
+@keyframes stripeMove {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 5000px 0; } }
 .nameHead {
   vertical-align: top;
   line-height: 7vw; }
@@ -101,6 +115,12 @@ nav {
   font-size: 1.6em; }
 
 #flexNav a:hover {
+  font-weight: 400;
+  letter-spacing: .15em;
+  transform: skewX(-10deg);
+  text-shadow: 0 0 4px #222020, 0 0 5px #f7e3e3, -0.3vw 0.3vw dodgerblue, 0.3vw -0.3vw red; }
+
+.activeTab {
   font-weight: 400;
   letter-spacing: .15em;
   transform: skewX(-10deg);
@@ -330,20 +350,6 @@ a {
 
   #dropDown {
     display: block; }
-
-  .mainBody {
-    float: none;
-    width: 93%;
-    text-align: justify;
-    margin: 3em auto; }
-
-  .mainBody p {
-    font-size: .9em; }
-
-  .mainAside {
-    float: none;
-    width: 93%;
-    margin: 2em auto; }
 
   .aboutBody {
     margin: auto;

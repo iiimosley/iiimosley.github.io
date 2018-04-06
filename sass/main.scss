@@ -52,7 +52,36 @@ h1 {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+    transition: all .7s;
+    &:hover{
+        // font-weight: 500;
+        letter-spacing: .1em;
+        background: repeating-radial-gradient(circle at 0 200%, #e28915 .3vw, #764100 .4vw, #20c3ff 1.2vw);
+        // background: repeating-radial-gradient(circle at 200%, white, red 2em, red 2.4em, dodgerblue 3em, white 4em);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+        animation: stripeMove 40s linear infinite;
+        // .slash {
+        //     background: radial-gradient(circle at 0 200%, white 70%, lightslategray 110%);
+        //     background-clip: text;
+        //     -webkit-background-clip: text;
+        //     -webkit-text-fill-color: transparent;
+        //     animation: stripeMove 40s linear infinite;
+        // }
+    }
  }
+
+@keyframes stripeMove {
+    from { 
+        background-position: 0 0; 
+    }
+	to { 
+        background-position: 5000px 0; 
+    }
+
+}
 
 .nameHead {
     vertical-align: top;
@@ -120,6 +149,13 @@ nav {
 }
 
 #flexNav a:hover {
+    font-weight: 400;
+    letter-spacing: .15em;
+    transform: skewX(-10deg);
+    text-shadow: 0 0 4px rgb(34, 32, 32), 0 0 5px rgb(247, 227, 227), -.3vw .3vw dodgerblue, .3vw -.3vw red;
+}
+
+.activeTab {
     font-weight: 400;
     letter-spacing: .15em;
     transform: skewX(-10deg);
@@ -409,20 +445,6 @@ a {
     }
     #dropDown {
         display: block;
-    }
-    .mainBody {
-        float: none;
-        width: 93%;
-        text-align: justify;
-        margin: 3em auto;
-    }
-    .mainBody p {
-        font-size: .9em;
-    }
-    .mainAside {
-        float: none;
-        width: 93%;
-        margin: 2em auto;
     }
     .aboutBody {
         margin: auto;
