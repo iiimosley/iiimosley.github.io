@@ -350,10 +350,17 @@ footer p {
     background: radial-gradient(ellipse at top, lightslategrey, darkslategray);
     color: white;
     border-top: .4vw double white;
-    svg {
-        // flex-grow: 1;
-        width: 10vw;
-        height: auto;
+    div {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        svg {
+            // flex-grow: 1;
+            width: 10vw;
+            height: auto;
+        }
     }
 }
 

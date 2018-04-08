@@ -20,6 +20,14 @@ $("#flexNav").on('click', (e)=>{
     selectTab(e);
 });
 
+$('#stickyFooter>div').on('click', (e)=>{
+    console.log(e.currentTarget.id);
+    $(`#${e.currentTarget.id}>svg>path`).css('fill', 'white');
+    // [...e.target.children].forEach(icon => {
+    //     icon.style.fill = 'white';
+    // });
+    $(`#stickyFooter>div:not(#${e.currentTarget.id})>svg>path`).css('fill', 'black');
+});
 
 $(document).on('click', '#aboutLink, #aboutMobile', aboutView);
 
