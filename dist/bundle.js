@@ -4,7 +4,7 @@
 const $ = require('jquery');
 const Handlebars = require('hbsfy/runtime');
 
-const { aboutView, portfolioView, contactView } = require('./view');
+const { homeView, aboutView, portfolioView, contactView } = require('./view');
 
 
 const selectTab = (e) => {
@@ -21,6 +21,8 @@ $('#stickyFooter>div').on('click', (e)=>{
     $(`#stickyFooter>div:not(#${e.currentTarget.id})>svg>path`).css('fill', 'black');
 });
 
+$(document).on('click', '#flexHead, #homeMobile', homeView);
+
 $(document).on('click', '#aboutLink, #aboutMobile', aboutView);
 
 $(document).on('click', '#portfolioLink, #portfolioMobile', portfolioView);
@@ -33,11 +35,12 @@ const $ = require('jquery');
 const Handlebars = require('hbsfy/runtime');
 
 const main = $("#mainContainer");
+const home = $("#homeContainer");
 const about = $("#aboutContainer");
 const portfolio = $("#portfolioContainer");
 const contact = $("#contactContainer");
 
-
+const homeSection = require('../templates/home.hbs');
 const aboutSection = require('../templates/about.hbs');
 const portfolioSection = require('../templates/portfolio.hbs');
 const contactSection = require('../templates/contact.hbs');
@@ -49,8 +52,15 @@ const clearAll = () => {
     contact.empty();
     about.fadeOut();
     about.empty();
+    home.fadeOut();
+    home.empty();
 };
 
+module.exports.homeView = () => {
+    clearAll();
+    home.append(homeSection);
+    home.fadeIn();
+};
 
 module.exports.aboutView = () => {
     clearAll();
@@ -69,7 +79,7 @@ module.exports.contactView = () => {
     contact.append(contactSection);
     contact.fadeIn();
 };
-},{"../templates/about.hbs":24,"../templates/contact.hbs":25,"../templates/portfolio.hbs":26,"hbsfy/runtime":22,"jquery":23}],3:[function(require,module,exports){
+},{"../templates/about.hbs":24,"../templates/contact.hbs":25,"../templates/home.hbs":26,"../templates/portfolio.hbs":27,"hbsfy/runtime":22,"jquery":23}],3:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -11585,7 +11595,14 @@ module.exports = HandlebarsCompiler.template({"compiler":[7,">= 4.0.0"],"main":f
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "";
+    return "<h2>Home</h2>";
+},"useData":true});
+
+},{"hbsfy/runtime":22}],27:[function(require,module,exports){
+// hbsfy compiled Handlebars template
+var HandlebarsCompiler = require('hbsfy/runtime');
+module.exports = HandlebarsCompiler.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<h2>Parlance of our times</h2>";
 },"useData":true});
 
 },{"hbsfy/runtime":22}]},{},[1]);

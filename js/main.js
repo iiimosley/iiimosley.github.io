@@ -3,7 +3,7 @@
 const $ = require('jquery');
 const Handlebars = require('hbsfy/runtime');
 
-const { aboutView, portfolioView, contactView } = require('./view');
+const { homeView, aboutView, portfolioView, contactView } = require('./view');
 
 
 const selectTab = (e) => {
@@ -19,6 +19,8 @@ $('#stickyFooter>div').on('click', (e)=>{
     $(`#${e.currentTarget.id}>svg>path`).css('fill', 'white');
     $(`#stickyFooter>div:not(#${e.currentTarget.id})>svg>path`).css('fill', 'black');
 });
+
+$(document).on('click', '#flexHead, #homeMobile', homeView);
 
 $(document).on('click', '#aboutLink, #aboutMobile', aboutView);
 
