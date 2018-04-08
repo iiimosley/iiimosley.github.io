@@ -312,16 +312,20 @@ a {
   border: 0.1vw double #9fd3d3;
   border-radius: 3em 30% 3em 30%;
   transition: all 1.1s; }
+  .item:hover {
+    background-color: rgba(104, 118, 129, 0.8);
+    color: #fffad2;
+    letter-spacing: .2vw;
+    text-shadow: 0.2em 0.2em 0.05em rgba(34, 46, 177, 0.95), -0.2em -0.2em 0.05em rgba(250, 47, 47, 0.95);
+    /* 1vw 0 3vw rgb(19, 19, 19), 
+    -1vw 0 7vw rgba(255, 253, 235, 0.97); */
+    border-radius: .7em; }
 
-.item:hover {
-  background-color: rgba(104, 118, 129, 0.8);
-  color: #fffad2;
-  letter-spacing: .2vw;
-  text-shadow: 0.2em 0.2em 0.05em rgba(34, 46, 177, 0.95), -0.2em -0.2em 0.05em rgba(250, 47, 47, 0.95);
-  /* 1vw 0 3vw rgb(19, 19, 19), 
-  -1vw 0 7vw rgba(255, 253, 235, 0.97); */
-  border-radius: .7em;
-  /* box-shadow: 0 0 2.5vw rgb(19, 19, 19), 0 0 4vw rgba(255, 253, 235, 0.97); */ }
+.item svg path {
+  fill: black;
+  transition: all .25s linear; }
+.item svg:hover path {
+  fill: white; }
 
 .item p {
   font-size: 1.3em; }

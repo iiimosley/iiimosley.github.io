@@ -400,9 +400,7 @@ a {
     border: .1vw double rgb(159, 211, 211);
     border-radius: 3em 30% 3em 30%;
     transition: all 1.1s;
-}
-
-.item:hover {
+    &:hover {
     background-color: rgba(104, 118, 129,.8);
     color: rgb(255, 250, 210);
     letter-spacing: .2vw;
@@ -411,8 +409,22 @@ a {
                 /* 1vw 0 3vw rgb(19, 19, 19), 
                 -1vw 0 7vw rgba(255, 253, 235, 0.97); */
     border-radius: .7em;
-    /* box-shadow: 0 0 2.5vw rgb(19, 19, 19), 0 0 4vw rgba(255, 253, 235, 0.97); */
+    }
 }
+
+.item svg {
+    path {
+        fill: black;
+        transition: all .25s linear;
+    }
+    &:hover {
+        path {
+            fill: white;
+        }
+    }
+}
+
+
 
 .item p {
     font-size: 1.3em;
