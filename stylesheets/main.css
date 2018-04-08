@@ -281,6 +281,8 @@ footer p {
     #stickyFooter div svg {
       width: 10vw;
       height: auto; }
+      #stickyFooter div svg path {
+        transition: all .5s; }
 
 /**anchors**/
 a {
