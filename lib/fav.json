@@ -1,0 +1,92 @@
+{
+    "facts": [
+        {
+            "title": "Favorite Cheese",
+            "text": "Gouda <sub>Havarti in a close second</sub>"
+        },
+        {
+            "title": "Favorite Kind of Beer",
+            "text": "German <sub>(esp, Weissenstaphner)</sub>"
+        },
+        {
+            "title": "Top 5 Films",
+            "text": "<ul><li>Andrei Rublov <span class='director'>(Andrei Tarkovsky)</span></li><li>The Face of Another <span class='director'>(Hiroshi Teshigahara)</span></li><li>Marriage of Maria Braun <span class='director'>(Rainer Werner Fassbinder)</span></li><li>Red Beard <span class='director'>(Akira Kurosawa)</span></li><li>A Man Escaped <span class='director'>(Robert Bresson)</span></li>"
+        },
+        {
+            "title": "Favorite HTML Templating Framework",
+            "text": "Handlebars.Js <sub>(@key is sweeeeet)</sub>"
+        },
+        {
+            "title": "Go-to Sushi Roll",
+            "text": "Alaskan <sub>(salmon + avacado)</sub>"
+        },
+        {
+            "title": "Favorite Spot to get Hot Chicken",
+            "text": "Prince's <sub>(South Nashville)</sub>"
+        },
+        {
+            "title": "Single vs Double Quotes",
+            "text": " ☝️ "
+        },
+        {
+            "title": "Favorite Episode of the Office",
+            "text": "The Dinner Party"  
+        },
+        {
+            "title": "Favorite Episode of Black Mirror",
+            "text": "<strong>Tie:</strong> Black Museum + San Junipero"
+        },
+        {
+            "title": "Most Rotated Brian Eno Album",
+            "text": "Another Green World"
+        },
+        {
+            "title": "Preferred Form of Caffeine",
+            "text": "Cold Brew Coffee"
+        },
+        {
+            "title": "Tacos vs Burrito",
+            "text": "Tacos"
+        },
+        {
+            "title": "Taco Protein of Choice",
+            "text": "<strong>Tie:</strong> Al Pastor + Barbacoa"
+        },
+        {
+            "title": "Preferred Form of Caffeine",
+            "text": "Cold Brew Coffee"
+        },
+        {
+            "title": "Favorite David Lynch Film",
+            "text": "Wild At Heart"
+        },
+        {
+            "title": "Preferred DAW",
+            "text": "Ableton"
+        },
+        {
+            "title": "Favorite Bowie Record",
+            "text": "<strong>Tie:</strong> Low + Lodger + Station to Station"
+        },
+        {
+            "title": "Favorite Trip Abroad",
+            "text": "Barcelona"
+        },
+        {
+            "title": "For || Against: IPA's",
+            "text": "For; but, in serious moderation"
+        },
+        {
+            "title": "Favorite Kubrick Film",
+            "text": "Dr. Strangelove"
+        },
+        {
+            "title": "Favorite Burger in Town",
+            "text": "Gabby's"
+        },
+        {
+            "title": "Favorite Sandwich Shop",
+            "text": "Mitchell's"
+        }
+    ]
+}
