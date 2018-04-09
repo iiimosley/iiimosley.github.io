@@ -88,8 +88,7 @@ const clearAll = () => {
 };
 
 const homeAppend = () => {
-    getStrategy().then(strategy => console.log('made it to view', strategy));
-    home.append(homeSection);
+    getStrategy().then(strategy => home.append(homeSection(strategy)));
     home.fadeIn();
 };
 
@@ -11635,7 +11634,13 @@ module.exports = HandlebarsCompiler.template({"compiler":[7,">= 4.0.0"],"main":f
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<h2>Home</h2>";
+    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "<div id=\"homeWrap\">\n    <h2>Oblique Strategy #"
+    + alias4(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"id","hash":{},"data":data}) : helper)))
+    + "</h2>\n    <p>"
+    + alias4(((helper = (helper = helpers.strategy || (depth0 != null ? depth0.strategy : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"strategy","hash":{},"data":data}) : helper)))
+    + "</p>\n</div>\n";
 },"useData":true});
 
 },{"hbsfy/runtime":23}],28:[function(require,module,exports){

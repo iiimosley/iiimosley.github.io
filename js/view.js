@@ -28,8 +28,7 @@ const clearAll = () => {
 };
 
 const homeAppend = () => {
-    getStrategy().then(strategy => console.log('made it to view', strategy));
-    home.append(homeSection);
+    getStrategy().then(strategy => home.append(homeSection(strategy)));
     home.fadeIn();
 };
 

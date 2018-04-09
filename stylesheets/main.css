@@ -136,6 +136,16 @@ nav {
 #aboutContainer, #portfolioContainer, #contactContainer {
   display: none; }
 
+/*** home ***/
+#homeWrap {
+  width: 90%;
+  margin: 1em auto; }
+  #homeWrap h2 {
+    font-weight: 300;
+    margin: 0 auto 1.5em;
+    text-align: center;
+    border-bottom: 1px double white; }
+
 /*about*/
 .aboutContainer {
   width: 91%;

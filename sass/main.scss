@@ -1,3 +1,10 @@
+@mixin titleText {
+    font-weight: 300;
+    margin: 0 auto 1.5em;
+    text-align: center;
+    border-bottom: 1px double white;
+}
+
 * {
     box-sizing: inherit;
 }
@@ -11,10 +18,7 @@ body {
 }
 
 h1 {
-    font-weight: 300;
-    margin: 0 auto 1.5em;
-    text-align: center;
-    border-bottom: 1px double white;
+    @include titleText();
 }
 
 /**anchors**/
@@ -180,6 +184,14 @@ nav {
     display: none;
 }
 
+/*** home ***/
+#homeWrap {
+    width: 90%;
+    margin: 1em auto;
+    h2 {
+        @include titleText();
+    }
+}
 
 /*about*/
 
