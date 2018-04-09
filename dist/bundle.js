@@ -11636,11 +11636,11 @@ var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
-  return "<div id=\"homeWrap\">\n    <h2>Oblique Strategy #"
+  return "<div id=\"homeWrap\">\n    <div id=\"obStrat\">\n        <h2>Oblique Strategy<sup>\n            <a href=\"https://en.wikipedia.org/wiki/Oblique_Strategies\" target=\"_blank\">&deg;</a>\n        </sup><span id=\"cardNum\">#"
     + alias4(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"id","hash":{},"data":data}) : helper)))
-    + "</h2>\n    <p>"
+    + "</span></h2>\n        <div id=\"obCard\">\n        <p>"
     + alias4(((helper = (helper = helpers.strategy || (depth0 != null ? depth0.strategy : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"strategy","hash":{},"data":data}) : helper)))
-    + "</p>\n</div>\n";
+    + "</p>\n        </div>\n    </div>\n</div>\n";
 },"useData":true});
 
 },{"hbsfy/runtime":23}],28:[function(require,module,exports){

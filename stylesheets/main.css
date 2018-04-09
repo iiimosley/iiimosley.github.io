@@ -10,9 +10,9 @@ body {
 
 h1 {
   font-weight: 300;
-  margin: 0 auto 1.5em;
   text-align: center;
-  border-bottom: 1px double white; }
+  border-bottom: 1px double white;
+  margin: 0 auto 1.5em; }
 
 /**anchors**/
 a {
@@ -133,6 +133,9 @@ nav {
   text-shadow: 0 0 4px #222020, 0 0 5px #f7e3e3, -0.3vw 0.3vw dodgerblue, 0.3vw -0.3vw red; }
 
 /*** dynamic divs ***/
+#mainContainer > div {
+  margin-bottom: 6em; }
+
 #aboutContainer, #portfolioContainer, #contactContainer {
   display: none; }
 
@@ -140,11 +143,30 @@ nav {
 #homeWrap {
   width: 90%;
   margin: 1em auto; }
-  #homeWrap h2 {
-    font-weight: 300;
-    margin: 0 auto 1.5em;
-    text-align: center;
-    border-bottom: 1px double white; }
+  #homeWrap #obStrat {
+    max-width: 240px;
+    margin: auto; }
+    #homeWrap #obStrat h2 {
+      font-weight: 300;
+      text-align: center;
+      border-bottom: 1px double white; }
+      #homeWrap #obStrat h2 #cardNum {
+        font-size: .7em; }
+      #homeWrap #obStrat h2 a {
+        text-decoration: none; }
+        #homeWrap #obStrat h2 a:hover {
+          cursor: crosshair; }
+    #homeWrap #obStrat #obCard {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 350px;
+      width: auto;
+      padding: 1em;
+      border: 1px solid white;
+      border-radius: 2.4em; }
+      #homeWrap #obStrat #obCard p {
+        text-align: center; }
 
 /*about*/
 .aboutContainer {
@@ -250,6 +272,12 @@ nav {
   border: 0.1vw double #9fd3d3;
   border-radius: 3em 30% 3em 30%;
   transition: all 1.1s; }
+  .item svg {
+    width: 3em;
+    height: auto; }
+  .item path {
+    fill: black;
+    transition: all .08s linear; }
   .item:hover {
     background-color: rgba(104, 118, 129, 0.8);
     color: #fffad2;
@@ -258,12 +286,11 @@ nav {
     /* 1vw 0 3vw rgb(19, 19, 19), 
     -1vw 0 7vw rgba(255, 253, 235, 0.97); */
     border-radius: .7em; }
-
-.item svg path {
-  fill: black;
-  transition: all .25s linear; }
-.item svg:hover path {
-  fill: white; }
+    .item:hover svg {
+      fill: rgba(30, 31, 32, 0.733);
+      filter: drop-shadow(0.31vw 0.31vw 0.15vw rgba(34, 46, 177, 0.9)) drop-shadow(-0.31vw -0.31vw 0.15vw rgba(250, 47, 47, 0.9)); }
+    .item:hover path {
+      fill: white; }
 
 .item p {
   font-size: 1.3em; }

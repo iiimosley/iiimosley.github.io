@@ -1,6 +1,5 @@
 @mixin titleText {
     font-weight: 300;
-    margin: 0 auto 1.5em;
     text-align: center;
     border-bottom: 1px double white;
 }
@@ -19,6 +18,7 @@ body {
 
 h1 {
     @include titleText();
+    margin: 0 auto 1.5em;
 }
 
 /**anchors**/
@@ -180,6 +180,10 @@ nav {
 
 /*** dynamic divs ***/
 
+#mainContainer>div {
+    margin-bottom: 6em;
+}
+
 #aboutContainer, #portfolioContainer, #contactContainer {
     display: none;
 }
@@ -188,8 +192,34 @@ nav {
 #homeWrap {
     width: 90%;
     margin: 1em auto;
-    h2 {
-        @include titleText();
+    #obStrat{
+        max-width: 240px;
+        margin: auto;
+        h2 {
+            @include titleText();
+            #cardNum {
+                font-size: .7em;
+            }
+            a {
+                text-decoration: none;
+                &:hover{
+                    cursor: crosshair;
+                }
+            }
+        }
+        #obCard {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 350px;
+            width: auto;
+            padding: 1em;
+            border: 1px solid white;
+            border-radius: 2.4em;
+            p {
+                text-align: center;
+            }
+        }
     }
 }
 
@@ -319,29 +349,44 @@ nav {
     border: .1vw double rgb(159, 211, 211);
     border-radius: 3em 30% 3em 30%;
     transition: all 1.1s;
-    &:hover {
-    background-color: rgba(104, 118, 129,.8);
-    color: rgb(255, 250, 210);
-    letter-spacing: .2vw;
-    text-shadow: .2em .2em .05em rgba(34, 46, 177, .95),
-                -.2em -.2em .05em rgba(250, 47, 47, .95);
-                /* 1vw 0 3vw rgb(19, 19, 19), 
-                -1vw 0 7vw rgba(255, 253, 235, 0.97); */
-    border-radius: .7em;
+    svg {
+        width: 3em;
+        height: auto;
     }
-}
-
-.item svg {
     path {
         fill: black;
-        transition: all .25s linear;
+        transition: all .08s linear;
     }
     &:hover {
+        background-color: rgba(104, 118, 129,.8);
+        color: rgb(255, 250, 210);
+        letter-spacing: .2vw;
+        text-shadow: .2em .2em .05em rgba(34, 46, 177, .95),
+                    -.2em -.2em .05em rgba(250, 47, 47, .95);
+                    /* 1vw 0 3vw rgb(19, 19, 19), 
+                    -1vw 0 7vw rgba(255, 253, 235, 0.97); */
+        border-radius: .7em;
+        svg {
+            fill: rgba(30, 31, 32, 0.733);
+            filter: drop-shadow(.31vw .31vw .15vw rgba(34, 46, 177, .9)) drop-shadow(-.31vw -.31vw .15vw rgba(250, 47, 47, .9));
+        }
         path {
             fill: white;
         }
     }
 }
+
+// .item svg {
+//     path {
+//         fill: black;
+//         transition: all .25s linear;
+//     }
+//     &:hover {
+//         path {
+//             fill: white;
+//         }
+//     }
+// }
 
 .item p {
     font-size: 1.3em;
