@@ -4,14 +4,18 @@
 const $ = require('jquery');
 const Handlebars = require('hbsfy/runtime');
 
-const { homeView, aboutView, portfolioView, contactView } = require('./view');
+const { homeAppend, homeView, aboutView, portfolioView, contactView } = require('./view');
+
+(function pageLoad() {
+    $('#homeMobile>svg>path').css('fill', 'white');
+    homeAppend();
+})();
 
 const deselectTab = () => {
     $("#flexNav>li>a").removeClass("activeTab");
 };
 
 const selectTab = (e) => {
-    // $("#flexNav>li>a").removeClass("activeTab");
     deselectTab();
     $(e.target).addClass("activeTab");
 };
@@ -34,6 +38,8 @@ $(document).on('click', '#aboutLink, #aboutMobile', aboutView);
 $(document).on('click', '#portfolioLink, #portfolioMobile', portfolioView);
 
 $(document).on('click', '#contactLink, #contactMobile', contactView);
+
+
 },{"./view":2,"hbsfy/runtime":22,"jquery":23}],2:[function(require,module,exports){
 'use strict';
 
@@ -62,29 +68,37 @@ const clearAll = () => {
     home.empty();
 };
 
-module.exports.homeView = () => {
-    clearAll();
+const homeAppend = () => {
     home.append(homeSection);
     home.fadeIn();
 };
 
-module.exports.aboutView = () => {
+const homeView = () => {
+    clearAll();
+    homeAppend();
+    // home.append(homeSection);
+    // home.fadeIn();
+};
+
+const aboutView = () => {
     clearAll();
     about.append(aboutSection);
     about.fadeIn();
 };
 
-module.exports.portfolioView = () => {
+const portfolioView = () => {
     clearAll();
     portfolio.append(portfolioSection);
     portfolio.fadeIn();
 };
 
-module.exports.contactView = () => {
+const contactView = () => {
     clearAll();
     contact.append(contactSection);
     contact.fadeIn();
 };
+
+module.exports = { homeAppend, homeView, aboutView, portfolioView, contactView };
 },{"../templates/about.hbs":24,"../templates/contact.hbs":25,"../templates/home.hbs":26,"../templates/portfolio.hbs":27,"hbsfy/runtime":22,"jquery":23}],3:[function(require,module,exports){
 'use strict';
 

@@ -25,26 +25,34 @@ const clearAll = () => {
     home.empty();
 };
 
-module.exports.homeView = () => {
-    clearAll();
+const homeAppend = () => {
     home.append(homeSection);
     home.fadeIn();
 };
 
-module.exports.aboutView = () => {
+const homeView = () => {
+    clearAll();
+    homeAppend();
+    // home.append(homeSection);
+    // home.fadeIn();
+};
+
+const aboutView = () => {
     clearAll();
     about.append(aboutSection);
     about.fadeIn();
 };
 
-module.exports.portfolioView = () => {
+const portfolioView = () => {
     clearAll();
     portfolio.append(portfolioSection);
     portfolio.fadeIn();
 };
 
-module.exports.contactView = () => {
+const contactView = () => {
     clearAll();
     contact.append(contactSection);
     contact.fadeIn();
 };
+
+module.exports = { homeAppend, homeView, aboutView, portfolioView, contactView };

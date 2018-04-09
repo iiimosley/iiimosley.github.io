@@ -3,14 +3,18 @@
 const $ = require('jquery');
 const Handlebars = require('hbsfy/runtime');
 
-const { homeView, aboutView, portfolioView, contactView } = require('./view');
+const { homeAppend, homeView, aboutView, portfolioView, contactView } = require('./view');
+
+(function pageLoad() {
+    $('#homeMobile>svg>path').css('fill', 'white');
+    homeAppend();
+})();
 
 const deselectTab = () => {
     $("#flexNav>li>a").removeClass("activeTab");
 };
 
 const selectTab = (e) => {
-    // $("#flexNav>li>a").removeClass("activeTab");
     deselectTab();
     $(e.target).addClass("activeTab");
 };
@@ -33,3 +37,4 @@ $(document).on('click', '#aboutLink, #aboutMobile', aboutView);
 $(document).on('click', '#portfolioLink, #portfolioMobile', portfolioView);
 
 $(document).on('click', '#contactLink, #contactMobile', contactView);
+

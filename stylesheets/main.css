@@ -1,3 +1,6 @@
+* {
+  box-sizing: inherit; }
+
 body {
   color: #fdf8e5;
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
@@ -11,6 +14,10 @@ h1 {
   text-align: center;
   border-bottom: 1px double white; }
 
+/**anchors**/
+a {
+  color: white; }
+
 /**header**/
 #navHead {
   display: none;
@@ -21,7 +28,7 @@ h1 {
   text-shadow: 2px 1px #212121;
   text-align: center;
   padding: .7em 0;
-  margin: 0 auto .5em auto;
+  margin: 0 auto 2.5em auto;
   border-bottom: .4vw double white;
   border-bottom-left-radius: 19%;
   letter-spacing: .15em;
@@ -125,51 +132,6 @@ nav {
   transform: skewX(-10deg);
   text-shadow: 0 0 4px #222020, 0 0 5px #f7e3e3, -0.3vw 0.3vw dodgerblue, 0.3vw -0.3vw red; }
 
-/**drop down nav**/
-#dropDown {
-  display: none;
-  position: relative;
-  width: 70%;
-  margin: 1em auto;
-  padding: .5em;
-  background-color: rgba(36, 2, 2, 0.904);
-  border: 1px solid rgba(158, 158, 158, 0.945);
-  border-radius: .5em;
-  cursor: pointer;
-  transition: background-color 1.2s; }
-
-#dropDown:hover {
-  background-color: linear-gradient(to left bottom, rgba(92, 88, 88, 0.377), rgba(255, 255, 255, 0.466)); }
-
-#dropDown h4 {
-  font-weight: 300;
-  letter-spacing: .3vw;
-  text-align: center;
-  margin: auto; }
-
-#dropContain {
-  display: none;
-  position: absolute;
-  width: 100%;
-  left: 0;
-  padding: 0;
-  margin: .8em auto 0;
-  background: repeating-radial-gradient(circle at 0 200%, #ff8c00 0.03vw, #2c241a 0.04vw, #063546 0.12vw);
-  border: 1px solid rgba(158, 158, 158, 0.753);
-  border-radius: .2em; }
-
-#dropContain a {
-  display: block;
-  font-size: 1.7em;
-  letter-spacing: .4em;
-  line-height: 2em;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: 0 0 4px #222020, 0 0 5px #f7e3e3; }
-
-#dropContain a:hover {
-  background: rgba(223, 220, 220, 0.945); }
-
 /*** dynamic divs ***/
 #aboutContainer, #portfolioContainer, #contactContainer {
   display: none; }
@@ -249,48 +211,6 @@ nav {
   width: 60%;
   margin: 3em auto; }
 
-/**footer**/
-footer {
-  clear: both;
-  float: right;
-  margin: 3em 4em 0 0; }
-
-footer p {
-  margin-top: 0;
-  font-size: .8em; }
-
-/** sticky footer **/
-#stickyFooter {
-  display: none;
-  position: fixed;
-  justify-content: space-around;
-  align-items: center;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 8%;
-  background: radial-gradient(ellipse at top, lightslategrey, darkslategray);
-  color: white;
-  border-top: .4vw double white; }
-  #stickyFooter div {
-    width: 20%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center; }
-    #stickyFooter div svg {
-      width: 10vw;
-      height: auto; }
-      #stickyFooter div svg path {
-        transition: all .5s; }
-
-/**anchors**/
-a {
-  color: white; }
-
-* {
-  box-sizing: inherit; }
-
 .contactMain {
   margin-bottom: 5em; }
 
@@ -357,6 +277,41 @@ a {
 
 #iconCredit {
   font-size: .7vw; }
+
+/**footer**/
+footer {
+  clear: both;
+  float: right;
+  margin: 3em 4em 0 0; }
+
+footer p {
+  margin-top: 0;
+  font-size: .8em; }
+
+/** sticky footer **/
+#stickyFooter {
+  display: none;
+  position: fixed;
+  justify-content: space-around;
+  align-items: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8%;
+  background: radial-gradient(ellipse at top, lightslategrey, darkslategray);
+  color: white;
+  border-top: .4vw double white; }
+  #stickyFooter div {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    #stickyFooter div svg {
+      width: 10vw;
+      height: auto; }
+      #stickyFooter div svg path {
+        transition: all .5s; }
 
 /**media**/
 @media (max-width: 920px) {
