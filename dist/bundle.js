@@ -55,6 +55,15 @@ module.exports.getStrategy = () => {
     });
 };
 
+module.exports.getFaves = () => {
+    return new Promise((resolve, reject) => {
+        $.ajax({
+            url: '../lib/fav.json',
+        })
+        .done(faves => resolve(faves))
+        .fail(error => reject(error));
+    });
+};
 
 
 },{"jquery":24}],3:[function(require,module,exports){
@@ -74,7 +83,9 @@ const aboutSection = require('../templates/about.hbs');
 const portfolioSection = require('../templates/portfolio.hbs');
 const contactSection = require('../templates/contact.hbs');
 
-const {getStrategy} = require('./model');
+const {getStrategy, getFaves} = require('./model');
+
+const randomInt = (range) => Math.floor(Math.random() * +range);
 
 const clearAll = () => {
     portfolio.fadeOut();
@@ -103,6 +114,7 @@ const aboutView = () => {
     clearAll();
     about.append(aboutSection);
     about.fadeIn();
+    getFaves().then(faves => console.log(faves[randomInt(faves.length)]));
 };
 
 const portfolioView = () => {

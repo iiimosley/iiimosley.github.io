@@ -14,7 +14,9 @@ const aboutSection = require('../templates/about.hbs');
 const portfolioSection = require('../templates/portfolio.hbs');
 const contactSection = require('../templates/contact.hbs');
 
-const {getStrategy} = require('./model');
+const {getStrategy, getFaves} = require('./model');
+
+const randomInt = (range) => Math.floor(Math.random() * +range);
 
 const clearAll = () => {
     portfolio.fadeOut();
@@ -43,6 +45,7 @@ const aboutView = () => {
     clearAll();
     about.append(aboutSection);
     about.fadeIn();
+    getFaves().then(faves => console.log(faves[randomInt(faves.length)]));
 };
 
 const portfolioView = () => {

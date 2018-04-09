@@ -12,4 +12,13 @@ module.exports.getStrategy = () => {
     });
 };
 
+module.exports.getFaves = () => {
+    return new Promise((resolve, reject) => {
+        $.ajax({
+            url: '../lib/fav.json',
+        })
+        .done(faves => resolve(faves))
+        .fail(error => reject(error));
+    });
+};
 
