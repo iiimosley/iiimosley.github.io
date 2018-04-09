@@ -4,11 +4,11 @@
 const $ = require('jquery');
 const Handlebars = require('hbsfy/runtime');
 
-const { homeAppend, homeView, aboutView, portfolioView, contactView } = require('./view');
+const { aboutAppend, homeView, aboutView, portfolioView, contactView } = require('./view');
 
 (function pageLoad() {
-    $('#homeMobile>svg>path').css('fill', 'white');
-    homeAppend();
+    $('#aboutMobile>svg>path').css('fill', 'white');
+    aboutAppend();
 })();
 
 const deselectTab = () => {
@@ -65,7 +65,15 @@ module.exports.getFaves = () => {
     });
 };
 
-
+module.exports.getWork = () => {
+    return new Promise((resolve, reject) => {
+        $.ajax({
+            url: '../lib/portfolio.json',
+        })
+        .done(faves => resolve(faves))
+        .fail(error => reject(error));
+    });
+};
 },{"jquery":24}],3:[function(require,module,exports){
 'use strict';
 
@@ -98,22 +106,22 @@ const clearAll = () => {
     home.empty();
 };
 
-const homeAppend = () => {
+// on page load function
+const aboutAppend = () => {
+    about.append(aboutSection);
+    about.fadeIn();
+};
+
+
+const homeView = () => {
+    clearAll();
     getStrategy().then(strategy => home.append(homeSection(strategy)));
     home.fadeIn();
 };
 
-const homeView = () => {
-    clearAll();
-    homeAppend();
-    // home.append(homeSection);
-    // home.fadeIn();
-};
-
 const aboutView = () => {
     clearAll();
-    about.append(aboutSection);
-    about.fadeIn();
+    aboutAppend();
     getFaves().then(faves => console.log(faves[randomInt(faves.length)]));
 };
 
@@ -129,7 +137,7 @@ const contactView = () => {
     contact.fadeIn();
 };
 
-module.exports = { homeAppend, homeView, aboutView, portfolioView, contactView };
+module.exports = { aboutAppend, homeView, aboutView, portfolioView, contactView };
 },{"../templates/about.hbs":25,"../templates/contact.hbs":26,"../templates/home.hbs":27,"../templates/portfolio.hbs":28,"./model":2,"hbsfy/runtime":23,"jquery":24}],4:[function(require,module,exports){
 'use strict';
 
@@ -11659,7 +11667,11 @@ module.exports = HandlebarsCompiler.template({"compiler":[7,">= 4.0.0"],"main":f
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<h2>Parlance of our times</h2>";
+    var helper;
+
+  return "<h1>Collected Works</h1>\n\n\n<div class=\"workWrap\">\n<h2>"
+    + container.escapeExpression(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"title","hash":{},"data":data}) : helper)))
+    + "</h2>\n</div>";
 },"useData":true});
 
 },{"hbsfy/runtime":23}]},{},[1]);

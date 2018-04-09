@@ -22,3 +22,12 @@ module.exports.getFaves = () => {
     });
 };
 
+module.exports.getWork = () => {
+    return new Promise((resolve, reject) => {
+        $.ajax({
+            url: '../lib/portfolio.json',
+        })
+        .done(faves => resolve(faves))
+        .fail(error => reject(error));
+    });
+};

@@ -3,11 +3,11 @@
 const $ = require('jquery');
 const Handlebars = require('hbsfy/runtime');
 
-const { homeAppend, homeView, aboutView, portfolioView, contactView } = require('./view');
+const { aboutAppend, homeView, aboutView, portfolioView, contactView } = require('./view');
 
 (function pageLoad() {
-    $('#homeMobile>svg>path').css('fill', 'white');
-    homeAppend();
+    $('#aboutMobile>svg>path').css('fill', 'white');
+    aboutAppend();
 })();
 
 const deselectTab = () => {

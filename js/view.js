@@ -29,22 +29,22 @@ const clearAll = () => {
     home.empty();
 };
 
-const homeAppend = () => {
+// on page load function
+const aboutAppend = () => {
+    about.append(aboutSection);
+    about.fadeIn();
+};
+
+
+const homeView = () => {
+    clearAll();
     getStrategy().then(strategy => home.append(homeSection(strategy)));
     home.fadeIn();
 };
 
-const homeView = () => {
-    clearAll();
-    homeAppend();
-    // home.append(homeSection);
-    // home.fadeIn();
-};
-
 const aboutView = () => {
     clearAll();
-    about.append(aboutSection);
-    about.fadeIn();
+    aboutAppend();
     getFaves().then(faves => console.log(faves[randomInt(faves.length)]));
 };
 
@@ -60,4 +60,4 @@ const contactView = () => {
     contact.fadeIn();
 };
 
-module.exports = { homeAppend, homeView, aboutView, portfolioView, contactView };
+module.exports = { aboutAppend, homeView, aboutView, portfolioView, contactView };
