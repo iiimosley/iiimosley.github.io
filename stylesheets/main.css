@@ -133,8 +133,8 @@ nav {
   text-shadow: 0 0 4px #222020, 0 0 5px #f7e3e3, -0.3vw 0.3vw dodgerblue, 0.3vw -0.3vw red; }
 
 /*** dynamic divs ***/
-#mainContainer > div {
-  margin-bottom: 6em; }
+#mainContainer {
+  padding-bottom: 6em; }
 
 #aboutContainer, #portfolioContainer, #contactContainer {
   display: none; }
