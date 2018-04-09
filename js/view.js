@@ -14,6 +14,8 @@ const aboutSection = require('../templates/about.hbs');
 const portfolioSection = require('../templates/portfolio.hbs');
 const contactSection = require('../templates/contact.hbs');
 
+const {getStrategy} = require('./model');
+
 const clearAll = () => {
     portfolio.fadeOut();
     portfolio.empty();
@@ -26,6 +28,7 @@ const clearAll = () => {
 };
 
 const homeAppend = () => {
+    getStrategy().then(strategy => console.log('made it to view', strategy));
     home.append(homeSection);
     home.fadeIn();
 };
