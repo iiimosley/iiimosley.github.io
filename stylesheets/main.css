@@ -259,14 +259,14 @@ nav {
   margin: auto;
   text-align: center; }
   #portfolioContainer .workWrap {
-    margin: 6em 0; }
+    margin-bottom: 6em; }
 
 .workImage {
   width: 38%;
   float: left; }
   .workImage img {
     max-width: 100%;
-    margin-top: 2em;
+    margin-top: 4em;
     height: auto; }
 
 .workContent {
@@ -275,7 +275,8 @@ nav {
   .workContent h2 {
     font-weight: 300;
     text-align: center;
-    border-bottom: 1px double white; }
+    border-bottom: 1px double white;
+    font-size: 2.3em; }
   .workContent p {
     text-align: left;
     width: 85%;
