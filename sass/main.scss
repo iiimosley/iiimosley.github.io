@@ -258,9 +258,6 @@ nav {
     line-height: 1.6em;
     font-weight: 300;
     margin-left: .4em;
-    i {
-        display: block;
-    }
 }
 
 .aboutLeft {
@@ -268,6 +265,18 @@ nav {
     width: 80%;
 }
 
+#aboutPhoto {
+    display: none;
+    float: right;
+    width: 38%;
+    margin-left: .4em;
+    img {
+        width: 100%;
+        height: auto;
+        border: .3em double white;
+        border-radius: 50%;
+    }
+}
 
 .education {
     width: 40%;
@@ -358,6 +367,8 @@ nav {
         max-width: 100%;
         margin-top: 4em;
         height: auto;
+        border: .55vw double white;
+        box-shadow: 0 0 1vw rgba(255, 245, 238, 0.651);
     }
 }
 
@@ -578,6 +589,9 @@ footer p {
         font-weight: 300;
         margin-left: .4em;
     }
+    #aboutPhoto {
+        display: block;
+    }
     .education {
         float: none;
         width: 95%;
@@ -588,9 +602,6 @@ footer p {
     }
     #eduMobile {
         display: block;
-    }
-    .aboutLeft {
-        float: none;
     }
     .workWrap{
         margin-bottom: 3.5em;
