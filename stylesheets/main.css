@@ -168,6 +168,17 @@ nav {
       #homeWrap #obStrat #obCard p {
         text-align: center; }
 
+#obLink > a {
+  color: white;
+  animation: animColor 4s inifite; }
+
+@keyframes animColor {
+  0% {
+    color: red; }
+  50% {
+    color: red; }
+  100% {
+    color: red; } }
 /*about*/
 .aboutContainer {
   width: 91%;
@@ -242,6 +253,43 @@ nav {
   display: block;
   width: 60%;
   margin: 3em auto; }
+
+#portfolioContainer {
+  width: 90%;
+  margin: auto;
+  text-align: center; }
+  #portfolioContainer .workWrap {
+    margin: 6em 0; }
+
+.workImage {
+  width: 38%;
+  float: left; }
+  .workImage img {
+    max-width: 100%;
+    margin-top: 2em;
+    height: auto; }
+
+.workContent {
+  float: right;
+  width: 57%; }
+  .workContent h2 {
+    font-weight: 300;
+    text-align: center;
+    border-bottom: 1px double white; }
+  .workContent p {
+    text-align: left;
+    width: 85%;
+    margin: 1em auto;
+    font-weight: 200;
+    line-height: 1.4em; }
+  .workContent a {
+    line-height: 1.4em; }
+  .workContent ul {
+    width: 40%;
+    margin: auto; }
+
+.workClear {
+  clear: both; }
 
 .contactMain {
   margin-bottom: 5em; }
@@ -335,7 +383,7 @@ footer p {
   bottom: 0;
   width: 100%;
   height: 8%;
-  background: radial-gradient(ellipse at top, lightslategrey, darkslategray);
+  background: radial-gradient(ellipse at top, #25282b, #161b1b);
   color: white;
   border-top: .4vw double white; }
   #stickyFooter div {
@@ -348,6 +396,7 @@ footer p {
       width: 10vw;
       height: auto; }
       #stickyFooter div svg path {
+        fill: #3c454e;
         transition: all .5s; }
 
 /**media**/

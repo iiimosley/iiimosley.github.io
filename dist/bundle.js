@@ -28,7 +28,7 @@ $("#flexHead").on('click', deselectTab);
 
 $('#stickyFooter>div').on('click', (e)=>{
     $(`#${e.currentTarget.id}>svg>path`).css('fill', 'white');
-    $(`#stickyFooter>div:not(#${e.currentTarget.id})>svg>path`).css('fill', 'black');
+    $(`#stickyFooter>div:not(#${e.currentTarget.id})>svg>path`).css('fill', 'rgb(60, 69, 78)');
 });
 
 $(document).on('click', '#flexHead, #homeMobile', homeView);
@@ -48,7 +48,8 @@ const $ = require('jquery');
 module.exports.getStrategy = () => {
     return new Promise((resolve, reject) => {
         $.ajax({
-            url: 'https://crossorigin.me/http://brianeno.needsyourhelp.org/draw',
+            url: 'https://crossorigin.me/http://brianeno.needsyourhelp.org/draw'
+            // headers: { 'Access-Control-Allow-Origin': 'http://localhost:8080' }
         })
         .done(strategy => resolve(strategy))
         .fail(error => reject(error));
@@ -70,7 +71,7 @@ module.exports.getWork = () => {
         $.ajax({
             url: '../lib/portfolio.json',
         })
-        .done(faves => resolve(faves))
+        .done(works => resolve(works))
         .fail(error => reject(error));
     });
 };
@@ -91,7 +92,7 @@ const aboutSection = require('../templates/about.hbs');
 const portfolioSection = require('../templates/portfolio.hbs');
 const contactSection = require('../templates/contact.hbs');
 
-const {getStrategy, getFaves} = require('./model');
+const {getStrategy, getFaves, getWork} = require('./model');
 
 const randomInt = (range) => Math.floor(Math.random() * +range);
 
@@ -127,8 +128,13 @@ const aboutView = () => {
 
 const portfolioView = () => {
     clearAll();
-    portfolio.append(portfolioSection);
+    // portfolio.append(portfolioSection);
+    getWork().then(works => {
+        // let mapWorks = works.map(work=>$.parseHTML(work));
+        portfolio.append(portfolioSection({objects: works}));
+    });
     portfolio.fadeIn();
+    $.parseHTML($(".workBrief"));
 };
 
 const contactView = () => {
@@ -11656,7 +11662,7 @@ var HandlebarsCompiler = require('hbsfy/runtime');
 module.exports = HandlebarsCompiler.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
-  return "<div id=\"homeWrap\">\n    <div id=\"obStrat\">\n        <h2>Oblique Strategy<sup>\n            <a href=\"https://en.wikipedia.org/wiki/Oblique_Strategies\" target=\"_blank\">&deg;</a>\n        </sup><span id=\"cardNum\">#"
+  return "<div id=\"homeWrap\">\n    <div id=\"obStrat\">\n        <h2>Oblique Strategy <span id=\"obLink\">\n            <a href=\"https://en.wikipedia.org/wiki/Oblique_Strategies\" target=\"_blank\">&deg;</a>\n        </span><span id=\"cardNum\">#"
     + alias4(((helper = (helper = helpers.id || (depth0 != null ? depth0.id : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"id","hash":{},"data":data}) : helper)))
     + "</span></h2>\n        <div id=\"obCard\">\n        <p>"
     + alias4(((helper = (helper = helpers.strategy || (depth0 != null ? depth0.strategy : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"strategy","hash":{},"data":data}) : helper)))
@@ -11666,12 +11672,36 @@ module.exports = HandlebarsCompiler.template({"compiler":[7,">= 4.0.0"],"main":f
 },{"hbsfy/runtime":23}],28:[function(require,module,exports){
 // hbsfy compiled Handlebars template
 var HandlebarsCompiler = require('hbsfy/runtime');
-module.exports = HandlebarsCompiler.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    var helper;
+module.exports = HandlebarsCompiler.template({"1":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
-  return "<h1>Collected Works</h1>\n\n\n<div class=\"workWrap\">\n<h2>"
-    + container.escapeExpression(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"title","hash":{},"data":data}) : helper)))
-    + "</h2>\n</div>";
+  return "<div class=\"workWrap\">\n    <div class=\"workImage\">\n        <img src=\""
+    + alias4(((helper = (helper = helpers.image || (depth0 != null ? depth0.image : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"image","hash":{},"data":data}) : helper)))
+    + "\"/>\n    </div>\n    <div class=\"workContent\">\n        <h2>"
+    + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
+    + "</h2>\n        <h4>"
+    + alias4(((helper = (helper = helpers.subtitle || (depth0 != null ? depth0.subtitle : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"subtitle","hash":{},"data":data}) : helper)))
+    + "</h4>\n        <p class=\"workBrief\">"
+    + ((stack1 = ((helper = (helper = helpers.brief || (depth0 != null ? depth0.brief : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"brief","hash":{},"data":data}) : helper))) != null ? stack1 : "")
+    + "</p>\n"
+    + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.link : depth0),{"name":"if","hash":{},"fn":container.program(2, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "        <div><a href=\""
+    + alias4(((helper = (helper = helpers.repo || (depth0 != null ? depth0.repo : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"repo","hash":{},"data":data}) : helper)))
+    + "\" target=\"_blank\">Github Repository</a></div>\n    </div>\n    <div class=\"workClear\"></div>\n</div>\n";
+},"2":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "        <div><a href=\""
+    + alias4(((helper = (helper = helpers.link || (depth0 != null ? depth0.link : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"link","hash":{},"data":data}) : helper)))
+    + "\" target=\"_blank\">"
+    + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
+    + "</a></div>\n";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<h1>Collected Works</h1>\n\n"
+    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.objects : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "\n";
 },"useData":true});
 
 },{"hbsfy/runtime":23}]},{},[1]);

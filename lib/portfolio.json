@@ -4,7 +4,7 @@
         "title": "SynthULX",
         "subtitle": "Front End Capstone at Nashville Software School",
         "brief": "abbr. Synthesizer + User Learning Experience; SynthULX is a web application synthesizer utilizing the synthesis capabilities of the <strong>Web Audio API</strong> & the web audio framework <strong>Tone.Js</strong>. The application implements integrative learning techniques by providing a step-by-step tutorial, guiding users with input responsive diagrams (built with <strong>HTML5 Canvas</strong>) and dynamic content to user interactions with each major component found on modern synthesizers. Registered users can save, load, edit, & delete patches of synth parameters to their account; full <strong>CRUD</strong> methodology with <strong>Firebase</strong> authentication.",
-        "link": "synthulx.firebaseapp.com",
+        "link": "https://synthulx.firebaseapp.com",
         "repo": "https://github.com/iiimosley/synthULX"
     },
     {

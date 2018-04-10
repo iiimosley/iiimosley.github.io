@@ -1,6 +1,20 @@
 <h1>Collected Works</h1>
 
-
+{{#each objects}}
 <div class="workWrap">
-<h2>{{title}}</h2>
+    <div class="workImage">
+        <img src="{{image}}"/>
+    </div>
+    <div class="workContent">
+        <h2>{{title}}</h2>
+        <h4>{{subtitle}}</h4>
+        <p class="workBrief">{{{brief}}}</p>
+        {{#if link}}
+        <div><a href="{{link}}" target="_blank">{{title}}</a></div>
+        {{/if}}
+        <div><a href="{{repo}}" target="_blank">Github Repository</a></div>
+    </div>
+    <div class="workClear"></div>
 </div>
+{{/each}}
+

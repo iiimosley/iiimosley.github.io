@@ -27,7 +27,7 @@ $("#flexHead").on('click', deselectTab);
 
 $('#stickyFooter>div').on('click', (e)=>{
     $(`#${e.currentTarget.id}>svg>path`).css('fill', 'white');
-    $(`#stickyFooter>div:not(#${e.currentTarget.id})>svg>path`).css('fill', 'black');
+    $(`#stickyFooter>div:not(#${e.currentTarget.id})>svg>path`).css('fill', 'rgb(60, 69, 78)');
 });
 
 $(document).on('click', '#flexHead, #homeMobile', homeView);

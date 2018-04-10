@@ -14,7 +14,7 @@ const aboutSection = require('../templates/about.hbs');
 const portfolioSection = require('../templates/portfolio.hbs');
 const contactSection = require('../templates/contact.hbs');
 
-const {getStrategy, getFaves} = require('./model');
+const {getStrategy, getFaves, getWork} = require('./model');
 
 const randomInt = (range) => Math.floor(Math.random() * +range);
 
@@ -50,8 +50,13 @@ const aboutView = () => {
 
 const portfolioView = () => {
     clearAll();
-    portfolio.append(portfolioSection);
+    // portfolio.append(portfolioSection);
+    getWork().then(works => {
+        // let mapWorks = works.map(work=>$.parseHTML(work));
+        portfolio.append(portfolioSection({objects: works}));
+    });
     portfolio.fadeIn();
+    $.parseHTML($(".workBrief"));
 };
 
 const contactView = () => {
