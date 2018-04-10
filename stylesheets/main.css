@@ -342,8 +342,7 @@ nav {
     width: 3em;
     height: auto; }
   .item path {
-    fill: black;
-    transition: all .08s linear; }
+    fill: black; }
   .item:hover {
     background-color: rgba(104, 118, 129, 0.8);
     color: #fffad2;
