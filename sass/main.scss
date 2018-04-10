@@ -339,9 +339,10 @@ nav {
     width: 90%;
     margin: auto;
     text-align: center;
-    .workWrap{
-        margin-bottom: 6em;
-    }
+}
+
+.workWrap{
+    margin-bottom: 6em;
 }
 
 .workImage {
@@ -372,8 +373,9 @@ nav {
         line-height: 1.4em;
     }
     ul {
-        width: 40%;
-        margin: auto;
+        width: 60%;
+        margin-left: 2em;
+        text-align: left;
     }
 }
 
@@ -583,6 +585,22 @@ footer p {
     }
     .aboutLeft {
         float: none;
+    }
+    .workWrap{
+        margin-bottom: 3.5em;
+    }
+    .workImage {
+        float: none;
+        width: 90%;
+        margin: auto;
+        img {
+            display: block;
+            margin: auto;
+        }
+    }
+    .workContent{
+        float: none;
+        width: 100%;
     }
     .grid {
         max-width: 90%;

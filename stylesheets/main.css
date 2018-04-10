@@ -258,8 +258,9 @@ nav {
   width: 90%;
   margin: auto;
   text-align: center; }
-  #portfolioContainer .workWrap {
-    margin-bottom: 6em; }
+
+.workWrap {
+  margin-bottom: 6em; }
 
 .workImage {
   width: 38%;
@@ -286,8 +287,9 @@ nav {
   .workContent a {
     line-height: 1.4em; }
   .workContent ul {
-    width: 40%;
-    margin: auto; }
+    width: 60%;
+    margin-left: 2em;
+    text-align: left; }
 
 .workClear {
   clear: both; }
@@ -443,6 +445,21 @@ footer p {
 
   .aboutLeft {
     float: none; }
+
+  .workWrap {
+    margin-bottom: 3.5em; }
+
+  .workImage {
+    float: none;
+    width: 90%;
+    margin: auto; }
+    .workImage img {
+      display: block;
+      margin: auto; }
+
+  .workContent {
+    float: none;
+    width: 100%; }
 
   .grid {
     max-width: 90%; }
