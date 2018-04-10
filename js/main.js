@@ -25,12 +25,12 @@ $("#flexNav").on('click', (e)=>{
 
 $("#flexHead").on('click', deselectTab);
 
-$('#stickyFooter>div').on('mousedown', (e) => {
+$('#stickyFooter>div').on('mousedown touchstart', (e) => {
     $(`#${e.currentTarget.id}>svg`).css('transform', 'scale(0.86)');
     $(`#stickyFooter>div>svg>path`).css('fill', 'rgb(60, 69, 78)');
 });
 
-$('#stickyFooter>div').on('mouseup', (e)=>{
+$('#stickyFooter>div').on('mouseup touchend', (e)=>{
     $(`#${e.currentTarget.id}>svg`).css('transform', 'scale(1)');
     $(`#${e.currentTarget.id}>svg>path`).css('fill', 'white');
     // $(`#stickyFooter>div:not(#${e.currentTarget.id})>svg>path`).css('fill', 'rgb(60, 69, 78)');
