@@ -411,7 +411,8 @@ footer p {
     align-items: center; }
     #stickyFooter div svg {
       width: 10vw;
-      height: auto; }
+      height: auto;
+      transition: all 0.7s cubic-bezier(0.215, 0.61, 0.355, 1); }
       #stickyFooter div svg path {
         fill: #3c454e;
         transition: all .5s; }

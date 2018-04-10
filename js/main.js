@@ -25,16 +25,22 @@ $("#flexNav").on('click', (e)=>{
 
 $("#flexHead").on('click', deselectTab);
 
-$('#stickyFooter>div').on('click', (e)=>{
-    $(`#${e.currentTarget.id}>svg>path`).css('fill', 'white');
-    $(`#stickyFooter>div:not(#${e.currentTarget.id})>svg>path`).css('fill', 'rgb(60, 69, 78)');
+$('#stickyFooter>div').on('mousedown', (e) => {
+    $(`#${e.currentTarget.id}>svg`).css('transform', 'scale(0.86)');
+    $(`#stickyFooter>div>svg>path`).css('fill', 'rgb(60, 69, 78)');
 });
 
-$(document).on('click', '#flexHead, #homeMobile', homeView);
+$('#stickyFooter>div').on('mouseup', (e)=>{
+    $(`#${e.currentTarget.id}>svg`).css('transform', 'scale(1)');
+    $(`#${e.currentTarget.id}>svg>path`).css('fill', 'white');
+    // $(`#stickyFooter>div:not(#${e.currentTarget.id})>svg>path`).css('fill', 'rgb(60, 69, 78)');
+});
 
-$(document).on('click', '#aboutLink, #aboutMobile', aboutView);
+$(document).on('mouseup', '#flexHead, #homeMobile', homeView);
 
-$(document).on('click', '#portfolioLink, #portfolioMobile', portfolioView);
+$(document).on('mouseup', '#aboutLink, #aboutMobile', aboutView);
 
-$(document).on('click', '#contactLink, #contactMobile', contactView);
+$(document).on('mouseup', '#portfolioLink, #portfolioMobile', portfolioView);
+
+$(document).on('mouseup', '#contactLink, #contactMobile', contactView);
 
