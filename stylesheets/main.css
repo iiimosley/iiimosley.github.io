@@ -192,6 +192,8 @@ nav {
   line-height: 1.6em;
   font-weight: 300;
   margin-left: .4em; }
+  .aboutBody p i {
+    display: block; }
 
 .aboutLeft {
   float: left;
@@ -258,6 +260,8 @@ nav {
   width: 90%;
   margin: auto;
   text-align: center; }
+  #portfolioContainer h1 {
+    max-width: 550px; }
 
 .workWrap {
   margin-bottom: 6em; }
@@ -460,6 +464,8 @@ footer p {
   .workContent {
     float: none;
     width: 100%; }
+    .workContent p {
+      width: 95%; }
 
   .grid {
     max-width: 90%; }

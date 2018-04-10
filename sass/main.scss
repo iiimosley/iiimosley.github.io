@@ -258,6 +258,9 @@ nav {
     line-height: 1.6em;
     font-weight: 300;
     margin-left: .4em;
+    i {
+        display: block;
+    }
 }
 
 .aboutLeft {
@@ -339,6 +342,9 @@ nav {
     width: 90%;
     margin: auto;
     text-align: center;
+    h1 {
+        max-width: 550px;
+    }
 }
 
 .workWrap{
@@ -601,6 +607,9 @@ footer p {
     .workContent{
         float: none;
         width: 100%;
+        p {
+            width: 95%;
+        }
     }
     .grid {
         max-width: 90%;
