@@ -428,6 +428,9 @@ nav {
     #workRefLogo{
         float: left;
         width: 20%;
+        &:hover{
+            cursor: pointer;
+        }
         svg{
             height: auto;
             width: 100%;
@@ -554,6 +557,41 @@ nav {
 
 #iconCredit {
     font-size: .7vw;
+}
+
+#mobileContact {
+    display: none;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: .8em;
+    font-style: italic;
+    #contactHandle{
+        font-size: 1.2em; 
+        font-style: normal;
+        letter-spacing: .2em;
+        margin: 0 1em;
+        color: rgb(255, 235, 124);
+        text-shadow: 0 0 .5vw white;
+        border-bottom: 1px solid rgb(255, 235, 124);
+    }
+    #contactFlex{
+        width: 80%;
+        margin: 4em auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .mobileIcon{
+            width: 20%;
+            svg{
+                width: 100%;
+                height: auto;
+                path {
+                    fill: seashell;
+                }
+            }
+        }
+    }
 }
 
 
@@ -687,16 +725,15 @@ footer p {
         }
     }
     .grid {
-        max-width: 90%;
+        display: none;
     }
-    .item p {
-    font-size: 1.1em;
+    #mobileContact {
+        display: block;
     }
-    .handle {
-        font-size: 2.2vw;
-    }
-    .item svg {
-        width: 2.5em;
+    #iconCredit {
+        font-size: 1.5vw;
+        margin: 9em 0 0 0;
+        text-align: right;
     }
     #stickyFooter {
         display: flex;
