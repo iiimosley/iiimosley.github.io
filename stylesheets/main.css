@@ -332,14 +332,15 @@ nav {
   margin: 1em auto; }
   #workRef #workRefLogo {
     float: left;
-    width: 20%; }
-    #workRef #workRefLogo:hover {
-      cursor: pointer; }
+    width: 20%;
+    height: auto; }
     #workRef #workRefLogo svg {
       height: auto;
       width: 100%; }
       #workRef #workRefLogo svg path {
         fill: white; }
+    #workRef #workRefLogo:hover {
+      cursor: pointer; }
   #workRef #workDirect {
     float: right;
     width: 75%;

@@ -428,15 +428,16 @@ nav {
     #workRefLogo{
         float: left;
         width: 20%;
-        &:hover{
-            cursor: pointer;
-        }
+        height: auto;
         svg{
             height: auto;
             width: 100%;
             path{
-                fill: white
+                fill: white;
             }
+        }
+        &:hover{
+            cursor: pointer;
         }
     }
     #workDirect{
