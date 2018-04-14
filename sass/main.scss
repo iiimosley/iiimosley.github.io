@@ -260,7 +260,10 @@ nav {
 
 .aboutBody {
     margin-right: 1em;
-    width: 80%
+    width: 80%;
+    &>h3{
+        padding-left: 1em;
+    }
 }
 
 .aboutBody p {
@@ -296,7 +299,7 @@ nav {
         width: 4em;
         height: auto;
         filter: drop-shadow(0 0 0 .3vw white);
-        margin: .5em;
+        margin: .5em .7em;
     }
 }
 
@@ -674,7 +677,7 @@ footer p {
     }
     .aboutBody {
         margin: auto;
-        width: 95%
+        width: 95%;
     }
     .aboutBody p {
         line-height: 1.6em;

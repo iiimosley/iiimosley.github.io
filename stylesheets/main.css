@@ -194,6 +194,8 @@ nav {
 .aboutBody {
   margin-right: 1em;
   width: 80%; }
+  .aboutBody > h3 {
+    padding-left: 1em; }
 
 .aboutBody p {
   line-height: 1.6em;
@@ -224,7 +226,7 @@ nav {
     width: 4em;
     height: auto;
     filter: drop-shadow(0 0 0 0.3vw white);
-    margin: .5em; }
+    margin: .5em .7em; }
 
 .education {
   width: 40%;
