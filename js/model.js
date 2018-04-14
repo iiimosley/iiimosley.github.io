@@ -1,12 +1,16 @@
 'use strict';
 
 const $ = require('jquery');
+// Access-Control-Allow-Origin: *;
 
+// Response.headers
+
+// data scraped from brianeno.needsyourhelp.org
+// cross origin issues prevented ajax calls
 module.exports.getStrategy = () => {
     return new Promise((resolve, reject) => {
         $.ajax({
-            url: 'https://crossorigin.me/http://brianeno.needsyourhelp.org/draw'
-            // headers: { 'Access-Control-Allow-Origin': 'http://localhost:8080' }
+            url: '../lib/ob.json',
         })
         .done(strategy => resolve(strategy))
         .fail(error => reject(error));

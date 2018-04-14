@@ -38,7 +38,7 @@ const aboutAppend = () => {
 
 const homeView = () => {
     clearAll();
-    getStrategy().then(strategy => home.append(homeSection(strategy)));
+    getStrategy().then(strategies => home.append(homeSection(strategies[randomInt(strategies.length)])));
     home.fadeIn();
 };
 

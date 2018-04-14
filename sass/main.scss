@@ -232,14 +232,23 @@ nav {
 
 @keyframes animColor {
   0% {
-    color: hsl(0, 100%, 50%);
+    color: white;
   } 
-  50% {
-    color: hsl(360, 100%, 50%);
+  35% {
+    color: dodgerblue;
+  }
+  70%{
+    color: tomato;
   }
   100% {
-    color: hsl(0, 100%, 50%);
+    color: white;
   }
+}
+
+#obFooter {
+    margin-top: 6em;
+    text-align: right;
+    font-size: .5em;
 }
 
 /*about*/
@@ -275,6 +284,19 @@ nav {
         height: auto;
         border: .3em double white;
         border-radius: 50%;
+    }
+}
+
+.iconFlex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    svg, img {
+        width: 4em;
+        height: auto;
+        filter: drop-shadow(0 0 0 .3vw white);
+        margin: .5em;
     }
 }
 
@@ -400,6 +422,30 @@ nav {
     clear: both;
 }
 
+#workRef{
+    width: 60%;
+    margin: 1em auto;
+    #workRefLogo{
+        float: left;
+        width: 20%;
+        svg{
+            height: auto;
+            width: 100%;
+            path{
+                fill: white
+            }
+        }
+    }
+    #workDirect{
+        float: right;
+        width: 75%;
+        font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+        font-size: 1.4em;
+        font-weight: 100;
+        text-align: left;
+    }
+}
+
 
 
 // contact  
@@ -410,6 +456,13 @@ nav {
 
 #contactHeader {
     width: 80%;
+    svg {
+        width: 1em;
+        height: auto;
+        path {
+            fill: rgb(253, 248, 229);
+        }
+    }
 }
 
 .grid {
@@ -435,7 +488,7 @@ nav {
     background-color: rgba(128,128,128,.3);
     border: .1vw double rgb(159, 211, 211);
     border-radius: 3em 30% 3em 30%;
-    transition: all 1.1s;
+    transition: all .9s;
     svg {
         width: 3em;
         height: auto;
@@ -559,7 +612,7 @@ footer p {
 
 @media (max-width: 920px) {
     .education {
-        width: 53%;
+        width: 48%;
     }
 }
 
@@ -603,6 +656,11 @@ footer p {
     #eduMobile {
         display: block;
     }
+    .iconFlex{
+        svg, img {
+            width: 3em;
+        }
+    }
     .workWrap{
         margin-bottom: 3.5em;
     }
@@ -620,6 +678,12 @@ footer p {
         width: 100%;
         p {
             width: 95%;
+        }
+    }
+    #workRef{
+        width: 90%;        
+        #workDirect{
+            font-size: 1em;
         }
     }
     .grid {

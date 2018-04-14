@@ -5,6 +5,8 @@ const Handlebars = require('hbsfy/runtime');
 
 const { aboutAppend, homeView, aboutView, portfolioView, contactView } = require('./view');
 
+
+
 (function pageLoad() {
     $('#aboutMobile>svg>path').css('fill', 'white');
     aboutAppend();
@@ -26,7 +28,7 @@ $("#flexNav").on('click', (e)=>{
 $("#flexHead").on('click', deselectTab);
 
 $('#stickyFooter>div').on('mousedown touchstart', (e) => {
-    $(`#${e.currentTarget.id}>svg`).css('transform', 'scale(0.86)');
+    $(`#${e.currentTarget.id}>svg`).css('transform', 'scale(0.8)');
     $(`#stickyFooter>div>svg>path`).css('fill', 'rgb(60, 69, 78)');
 });
 
@@ -43,4 +45,3 @@ $(document).on('mouseup', '#aboutLink, #aboutMobile', aboutView);
 $(document).on('mouseup', '#portfolioLink, #portfolioMobile', portfolioView);
 
 $(document).on('mouseup', '#contactLink, #contactMobile', contactView);
-

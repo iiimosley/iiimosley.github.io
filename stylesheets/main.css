@@ -174,11 +174,18 @@ nav {
 
 @keyframes animColor {
   0% {
-    color: red; }
-  50% {
-    color: red; }
+    color: white; }
+  35% {
+    color: dodgerblue; }
+  70% {
+    color: tomato; }
   100% {
-    color: red; } }
+    color: white; } }
+#obFooter {
+  margin-top: 6em;
+  text-align: right;
+  font-size: .5em; }
+
 /*about*/
 .aboutContainer {
   width: 91%;
@@ -207,6 +214,17 @@ nav {
     height: auto;
     border: .3em double white;
     border-radius: 50%; }
+
+.iconFlex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center; }
+  .iconFlex svg, .iconFlex img {
+    width: 4em;
+    height: auto;
+    filter: drop-shadow(0 0 0 0.3vw white);
+    margin: .5em; }
 
 .education {
   width: 40%;
@@ -309,11 +327,35 @@ nav {
 .workClear {
   clear: both; }
 
+#workRef {
+  width: 60%;
+  margin: 1em auto; }
+  #workRef #workRefLogo {
+    float: left;
+    width: 20%; }
+    #workRef #workRefLogo svg {
+      height: auto;
+      width: 100%; }
+      #workRef #workRefLogo svg path {
+        fill: white; }
+  #workRef #workDirect {
+    float: right;
+    width: 75%;
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    font-size: 1.4em;
+    font-weight: 100;
+    text-align: left; }
+
 .contactMain {
   margin-bottom: 5em; }
 
 #contactHeader {
   width: 80%; }
+  #contactHeader svg {
+    width: 1em;
+    height: auto; }
+    #contactHeader svg path {
+      fill: #fdf8e5; }
 
 .grid {
   margin: 0 auto;
@@ -337,7 +379,7 @@ nav {
   background-color: rgba(128, 128, 128, 0.3);
   border: 0.1vw double #9fd3d3;
   border-radius: 3em 30% 3em 30%;
-  transition: all 1.1s; }
+  transition: all .9s; }
   .item svg {
     width: 3em;
     height: auto; }
@@ -420,7 +462,7 @@ footer p {
 /**media**/
 @media (max-width: 920px) {
   .education {
-    width: 53%; } }
+    width: 48%; } }
 @media (max-width: 577px) {
   .nameHead, .titleHead {
     font-size: 4.5vw; }
@@ -461,6 +503,9 @@ footer p {
   #eduMobile {
     display: block; }
 
+  .iconFlex svg, .iconFlex img {
+    width: 3em; }
+
   .workWrap {
     margin-bottom: 3.5em; }
 
@@ -477,6 +522,11 @@ footer p {
     width: 100%; }
     .workContent p {
       width: 95%; }
+
+  #workRef {
+    width: 90%; }
+    #workRef #workDirect {
+      font-size: 1em; }
 
   .grid {
     max-width: 90%; }
