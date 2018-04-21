@@ -474,7 +474,7 @@ nav {
     margin: 1em auto;
     #workRefLogo{
         float: left;
-        width: 20%;
+        width: 4em;
         height: auto;
         svg{
             height: auto;
@@ -771,12 +771,12 @@ footer p {
         #workDirect{
             font-size: 1em;
         }
+        #workRefLogo{
+            width: 3.5em;
+        }
     }
     #favOut{
         width: 100%;
-    }
-    #favBtn{
-        
     }
     .grid {
         display: none;
