@@ -45,7 +45,6 @@ const homeView = () => {
 const aboutView = () => {
     clearAll();
     aboutAppend();
-    getFaves().then(faves => console.log(faves[randomInt(faves.length)]));
 };
 
 const portfolioView = () => {
@@ -65,4 +64,14 @@ const contactView = () => {
     contact.fadeIn();
 };
 
-module.exports = { aboutAppend, homeView, aboutView, portfolioView, contactView };
+const newFact = () => {
+    console.log('here!');
+    getFaves()
+    .then(faves => {
+        let randomFav = faves[randomInt(faves.length)];
+        $('#favTitleOut').html(`${randomFav.title}`);
+        $('#favTextOut').html(`${randomFav.text}`);
+    });
+};
+
+module.exports = { aboutAppend, homeView, aboutView, portfolioView, contactView, newFact };

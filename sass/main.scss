@@ -364,6 +364,50 @@ nav {
     letter-spacing: .2vw;
 }
 
+#favOut{
+    width: 70%;
+}
+
+#favTitleOut{
+    text-align: center;
+    font-size: 1.2em;
+    letter-spacing: .1em;
+    font-style: italic;
+    margin: .7em auto;
+}
+
+#favTextOut{
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+#favBtn {
+    display: block;
+    margin: auto auto 2em;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: .4em 1.2em;
+    font: inherit;
+    font-size: 1.3em;
+    letter-spacing: .2em;
+    cursor: pointer;
+    outline: inherit;
+    border: 1px solid white;
+    border-radius: .3em;
+    box-shadow: 0 0.3em;
+    transform: translateY(-0.3em);
+    transition: all .2s;
+    &:hover {
+        box-shadow: 0 0.2em snow;
+        transform: translateY(-0.2em);
+    }
+    &:active{
+        box-shadow: 0 0 .4em snow;
+        transform: translateY(-0.03em);
+    }
+}
+
 #lars {
     display: block;
     width: 60%;
@@ -727,6 +771,12 @@ footer p {
         #workDirect{
             font-size: 1em;
         }
+    }
+    #favOut{
+        width: 100%;
+    }
+    #favBtn{
+        
     }
     .grid {
         display: none;

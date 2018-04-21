@@ -3,7 +3,8 @@
 const $ = require('jquery');
 const Handlebars = require('hbsfy/runtime');
 
-const { aboutAppend, homeView, aboutView, portfolioView, contactView } = require('./view');
+const { aboutAppend, homeView, aboutView, portfolioView, contactView, newFact } = require('./view');
+
 
 
 
@@ -45,3 +46,6 @@ $(document).on('mouseup', '#aboutLink, #aboutMobile', aboutView);
 $(document).on('mouseup', '#portfolioLink, #portfolioMobile', portfolioView);
 
 $(document).on('mouseup', '#contactLink, #contactMobile', contactView);
+
+$(document).on('mouseup touchup', '#favBtn', newFact);
+
