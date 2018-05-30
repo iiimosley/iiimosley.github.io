@@ -65,7 +65,6 @@ const contactView = () => {
 };
 
 const newFact = () => {
-    console.log('here!');
     getFaves()
     .then(faves => {
         let randomFav = faves[randomInt(faves.length)];

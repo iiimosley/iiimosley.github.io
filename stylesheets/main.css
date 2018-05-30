@@ -280,8 +280,16 @@ nav {
   font-size: 1.2em;
   letter-spacing: .2vw; }
 
+#personal {
+  text-align: center;
+  margin: 5em auto; }
+  #personal h2 {
+    margin: 2em auto;
+    font-size: 1.8em; }
+
 #favOut {
-  width: 70%; }
+  width: 70%;
+  margin: auto; }
 
 #favTitleOut {
   text-align: center;
