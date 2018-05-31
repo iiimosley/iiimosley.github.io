@@ -117,7 +117,7 @@ nav {
 #flexNav a {
   display: inline-block;
   text-decoration: none;
-  transition: all 0.35s cubic-bezier(0.47, 0, 0.745, 0.715);
+  transition: all 0.28s cubic-bezier(0.47, 0, 0.745, 0.715);
   font-size: 1.6em; }
 
 #flexNav a:hover {
@@ -201,6 +201,9 @@ nav {
   line-height: 1.6em;
   font-weight: 300;
   margin-left: .4em; }
+
+#why {
+  margin: 3em 0 1em; }
 
 .aboutLeft {
   float: left;
@@ -329,7 +332,9 @@ nav {
 #lars {
   display: block;
   width: 60%;
-  margin: 3em auto; }
+  margin: 3em auto;
+  border-radius: .2em;
+  box-shadow: 0 0 10px #f7f7b0; }
 
 #portfolioContainer {
   width: 90%;
