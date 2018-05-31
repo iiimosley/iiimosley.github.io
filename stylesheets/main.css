@@ -342,6 +342,28 @@ nav {
   border-radius: .2em;
   box-shadow: 0 0 10px #f7f7b0; }
 
+.btnFlash {
+  animation: buttonFlash 2.4s linear infinite; }
+
+@keyframes buttonFlash {
+  0% {
+    box-shadow: 0 0.3em, none; }
+  7% {
+    box-shadow: 0 0.3em, 0 0 1.6em rgba(204, 128, 36, 0.856); }
+  14% {
+    box-shadow: 0 0.3em, none; }
+  21% {
+    box-shadow: 0 0.3em, 0 0 1.6em rgba(204, 128, 36, 0.856); }
+  28% {
+    box-shadow: 0 0.3em, none; }
+  42% {
+    box-shadow: 0 0.3em, 0 0 1.6em rgba(204, 128, 36, 0.856); }
+  49% {
+    box-shadow: 0 0.3em, none; }
+  56% {
+    box-shadow: 0 0.3em, 0 0 1.6em rgba(204, 128, 36, 0.856); }
+  63% {
+    box-shadow: 0 0.3em, none; } }
 #portfolioContainer {
   width: 90%;
   margin: auto;
