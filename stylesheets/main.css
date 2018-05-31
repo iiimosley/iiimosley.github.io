@@ -196,6 +196,10 @@ nav {
   width: 80%; }
   .aboutBody > h3 {
     padding-left: 1em; }
+  .aboutBody ul {
+    margin-bottom: 5em; }
+    .aboutBody ul li {
+      line-height: 2em; }
 
 .aboutBody p {
   line-height: 1.6em;
@@ -203,7 +207,9 @@ nav {
   margin-left: .4em; }
 
 #why {
-  margin: 3em 0 1em; }
+  margin: 3em 0 1em;
+  font-size: 1.2em;
+  font-style: italic; }
 
 .aboutLeft {
   float: left;
