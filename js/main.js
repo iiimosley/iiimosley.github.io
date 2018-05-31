@@ -49,3 +49,7 @@ $(document).on('mouseup', '#contactLink, #contactMobile', contactView);
 
 $(document).on('mouseup touchup', '#favBtn', newFact);
 
+$(document).on('mouseover touchstart', '.btnFlash', ()=>{
+    $('.btnFlash').removeAttr('class', 'btnFlash');
+});
+
