@@ -653,7 +653,8 @@ footer p {
     text-align: right; }
 
   #stickyFooter {
-    display: flex; } }
+    display: flex;
+    z-index: 200; } }
 @media (max-width: 816px) {
   .grid {
     max-width: 80%; }
