@@ -8,6 +8,13 @@
         "repo": "https://github.com/iiimosley/synthULX"
     },
     {
+        "image": "../img/goodreads.png",
+        "title": "GoodQuotes",
+        "brief": "RESTful API returning JSON data of quotes by querying persons-of-note, publications, or tags. Data constructed from web scraping GoodReads for user-submitted quotes (via Cheerio.Js). Client constructed with Vue.Js",
+        "link": "https://goodquotes.herokuapp.com",
+        "repo": "https://github.com/iiimosley/WebAudioSandBox"
+    },
+    {
         "image": "../img/webaudiosandbox.png",
         "title": "WebAudio SandBox",
         "brief": "Web application constructed for my presentation, <strong>Javascript Synthesis: Web Audio API &amp; Tones.Js</strong> at the <strong><a href='https://www.meetup.com/Nashville-Music-Programmers/' target='_blank'>Nashville Music Programmers</a></strong> meet-up. The application was built to give example to the AudioNode structure and routing paradigm in the Web Audio API. The application logs each AudioNode for group examination of components and demostrates the responsive changes in values to the AudioNode components. Open the WebAudio console in Firefox to view the routing paradigm.",

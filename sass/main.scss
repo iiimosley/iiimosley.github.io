@@ -851,6 +851,7 @@ footer p {
     }
     #stickyFooter {
         display: flex;
+        z-index: 200;
     }
 }
 
