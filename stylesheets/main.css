@@ -211,6 +211,10 @@ nav {
   font-size: 1.2em;
   font-style: italic; }
 
+#aboutTech {
+  max-width: 1200px;
+  margin: 8em auto; }
+
 .aboutLeft {
   float: left;
   width: 80%; }
@@ -290,6 +294,7 @@ nav {
   letter-spacing: .2vw; }
 
 #personal {
+  max-width: 500px;
   text-align: center;
   margin: 5em auto; }
   #personal h2 {
