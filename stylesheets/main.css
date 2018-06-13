@@ -340,9 +340,13 @@ nav {
     box-shadow: 0 0 .4em snow;
     transform: translateY(-0.03em); }
 
+#catto {
+  max-width: 700px;
+  margin: 8em auto; }
+
 #lars {
   display: block;
-  width: 60%;
+  width: 90%;
   max-width: 600px;
   margin: 3em auto;
   border-radius: .2em;
