@@ -193,6 +193,7 @@ nav {
 
 .aboutBody {
   margin-right: 1em;
+  max-width: 1000px;
   width: 80%; }
   .aboutBody > h3 {
     padding-left: 1em; }
@@ -214,6 +215,9 @@ nav {
 #aboutTech {
   max-width: 1200px;
   margin: 8em auto; }
+  #aboutTech h2 {
+    margin-left: -1.5em;
+    margin-bottom: 1em; }
 
 .aboutLeft {
   float: left;
@@ -243,6 +247,7 @@ nav {
 
 .education {
   width: 40%;
+  max-width: 550px;
   float: right;
   font-size: .9em;
   line-height: 1.5em;
