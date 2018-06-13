@@ -191,6 +191,10 @@ nav {
   width: 91%;
   margin: 0 auto; }
 
+#aboutFloat {
+  max-width: 1600px;
+  margin: 4em auto; }
+
 .aboutBody {
   margin-right: 1em;
   max-width: 1000px;
