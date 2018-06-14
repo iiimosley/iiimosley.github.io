@@ -9,7 +9,7 @@
     },
     {
         "title": "Top 5 Films",
-        "text": "<ol><li>Andrei Rublov <span class='director'>(Andrei Tarkovsky)</span></li><li>The Face of Another <span class='director'>(Hiroshi Teshigahara)</span></li><li>Marriage of Maria Braun <span class='director'>(Rainer Werner Fassbinder)</span></li><li>Red Beard <span class='director'>(Akira Kurosawa)</span></li><li>A Man Escaped <span class='director'>(Robert Bresson)</span></li></ol>"
+        "text": "<ol><li>Andrei Rublov <br><span class='director'>(Andrei Tarkovsky)</span></li><li>The Face of Another <br><span class='director'>(Hiroshi Teshigahara)</span></li><li>Marriage of Maria Braun <br><span class='director'>(Rainer Werner Fassbinder)</span></li><li>Red Beard <br><span class='director'>(Akira Kurosawa)</span></li><li>A Man Escaped <br><span class='director'>(Robert Bresson)</span></li></ol>"
     },
     {
         "title": "Favorite Templating Engine",

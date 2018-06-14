@@ -310,10 +310,13 @@ nav {
 #personal {
   max-width: 500px;
   text-align: center;
-  margin: 5em auto; }
+  margin: 5em auto;
+  padding: 1em; }
   #personal h2 {
-    margin: 2em auto;
-    font-size: 1.8em; }
+    margin: 1.4em auto;
+    font-size: 2.2em;
+    letter-spacing: .15em;
+    transform: skew(-9deg); }
 
 #favOut {
   width: 70%;
@@ -321,14 +324,19 @@ nav {
 
 #favTitleOut {
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.4em;
   letter-spacing: .1em;
   font-style: italic;
-  margin: .7em auto; }
+  color: #f5eba9;
+  margin: 2.8em auto 1em; }
 
 #favTextOut {
   text-align: center;
-  margin-bottom: 4em; }
+  margin-bottom: 4em;
+  font-size: 1.4em; }
+  #favTextOut .director {
+    font-size: .8em;
+    font-style: italic; }
 
 #favBtn {
   display: block;
@@ -620,6 +628,11 @@ footer p {
     font-weight: 300;
     margin-left: .4em; }
 
+  #aboutTech {
+    margin: 4em auto; }
+    #aboutTech > h2 {
+      margin-left: 0; }
+
   #aboutPhoto {
     display: block; }
 
@@ -663,6 +676,9 @@ footer p {
 
   #favOut {
     width: 100%; }
+
+  #personal {
+    margin: 4em auto 20em; }
 
   .grid {
     display: none; }
