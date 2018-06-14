@@ -270,12 +270,6 @@ nav {
     &>h3{
         padding-left: 1em;
     }
-    ul {
-        margin-bottom: 5em;
-        li {
-            line-height: 2em;
-        }
-    }
 }
 
 .aboutBody p {
@@ -284,11 +278,25 @@ nav {
     margin-left: .4em;
 }
 
-#why {
-    margin: 3em 0 1em;
-    font-size: 1.2em;
-    font-style: italic;
+#aboutWhy{
+    max-width: 800px;
+    margin: 0 auto;
+    #why {
+        margin-top: 3em;
+        font-size: 1.2em;
+        font-style: italic;
+    }
+    ul{
+        max-width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+        li {
+            line-height: 2em;
+        } 
+    }
 }
+
+
 
 #aboutTech {
     max-width: 1200px;

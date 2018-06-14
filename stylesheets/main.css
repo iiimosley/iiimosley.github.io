@@ -201,20 +201,25 @@ nav {
   width: 80%; }
   .aboutBody > h3 {
     padding-left: 1em; }
-  .aboutBody ul {
-    margin-bottom: 5em; }
-    .aboutBody ul li {
-      line-height: 2em; }
 
 .aboutBody p {
   line-height: 1.6em;
   font-weight: 300;
   margin-left: .4em; }
 
-#why {
-  margin: 3em 0 1em;
-  font-size: 1.2em;
-  font-style: italic; }
+#aboutWhy {
+  max-width: 800px;
+  margin: 0 auto; }
+  #aboutWhy #why {
+    margin-top: 3em;
+    font-size: 1.2em;
+    font-style: italic; }
+  #aboutWhy ul {
+    max-width: 700px;
+    margin-right: auto;
+    margin-left: auto; }
+    #aboutWhy ul li {
+      line-height: 2em; }
 
 #aboutTech {
   max-width: 1200px;
