@@ -395,7 +395,8 @@ nav {
   margin: auto;
   text-align: center; }
   #portfolioContainer h1 {
-    max-width: 550px; }
+    max-width: 600px;
+    font-size: 2.5em; }
 
 .workWrap {
   margin-bottom: 6em; }
@@ -417,7 +418,9 @@ nav {
     font-weight: 300;
     text-align: center;
     border-bottom: 1px double white;
-    font-size: 2.3em; }
+    font-size: 2.3em;
+    max-width: 450px;
+    margin: auto; }
   .workContent p {
     text-align: left;
     width: 85%;
@@ -435,7 +438,7 @@ nav {
   clear: both; }
 
 #workRef {
-  width: 60%;
+  width: 50%;
   margin: 1em auto; }
   #workRef #workRefLogo {
     float: left;

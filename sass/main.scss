@@ -510,7 +510,8 @@ nav {
     margin: auto;
     text-align: center;
     h1 {
-        max-width: 550px;
+        max-width: 600px;
+        font-size: 2.5em;
     }
 }
 
@@ -536,6 +537,8 @@ nav {
     h2 {
         @include titleText();
         font-size: 2.3em;
+        max-width: 450px;
+        margin: auto;
     }
     p {
         text-align: left;
@@ -559,7 +562,7 @@ nav {
 }
 
 #workRef{
-    width: 60%;
+    width: 50%;
     margin: 1em auto;
     #workRefLogo{
         float: left;
