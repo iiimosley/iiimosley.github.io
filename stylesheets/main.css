@@ -394,6 +394,7 @@ nav {
   100% {
     box-shadow: 0 0.3em, none; } }
 #portfolioContainer {
+  max-width: 1700px;
   width: 90%;
   margin: auto;
   text-align: center; }
@@ -426,6 +427,7 @@ nav {
     margin: auto; }
   .workContent p {
     text-align: left;
+    max-width: 650px;
     width: 85%;
     margin: 1em auto;
     font-weight: 200;
@@ -434,7 +436,8 @@ nav {
     line-height: 1.4em; }
   .workContent ul {
     width: 60%;
-    margin-left: 2em;
+    max-width: 400px;
+    margin: auto;
     text-align: left; }
 
 .workClear {
