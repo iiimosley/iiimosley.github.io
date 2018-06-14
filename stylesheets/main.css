@@ -664,7 +664,7 @@ footer p {
   .workImage {
     float: none;
     width: 90%;
-    margin: auto; }
+    margin: 6em auto 2em; }
     .workImage img {
       display: block;
       margin: auto; }
