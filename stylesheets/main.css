@@ -191,25 +191,45 @@ nav {
   width: 91%;
   margin: 0 auto; }
 
+#aboutFloat {
+  max-width: 1600px;
+  margin: 4em auto; }
+
 .aboutBody {
   margin-right: 1em;
+  max-width: 1000px;
   width: 80%; }
   .aboutBody > h3 {
     padding-left: 1em; }
-  .aboutBody ul {
-    margin-bottom: 5em; }
-    .aboutBody ul li {
-      line-height: 2em; }
 
 .aboutBody p {
   line-height: 1.6em;
   font-weight: 300;
   margin-left: .4em; }
 
-#why {
-  margin: 3em 0 1em;
-  font-size: 1.2em;
-  font-style: italic; }
+.aboutBody > h2, #aboutTech > h2 {
+  font-size: 1.8em; }
+
+#aboutWhy {
+  max-width: 800px;
+  margin: 0 auto; }
+  #aboutWhy #why {
+    margin-top: 3em;
+    font-size: 1.2em;
+    font-style: italic; }
+  #aboutWhy ul {
+    max-width: 700px;
+    margin-right: auto;
+    margin-left: auto; }
+    #aboutWhy ul li {
+      line-height: 2em; }
+
+#aboutTech {
+  max-width: 1200px;
+  margin: 8em auto; }
+  #aboutTech h2 {
+    margin-left: -1.5em;
+    margin-bottom: 1em; }
 
 .aboutLeft {
   float: left;
@@ -239,6 +259,7 @@ nav {
 
 .education {
   width: 40%;
+  max-width: 550px;
   float: right;
   font-size: .9em;
   line-height: 1.5em;
@@ -290,11 +311,15 @@ nav {
   letter-spacing: .2vw; }
 
 #personal {
+  max-width: 500px;
   text-align: center;
-  margin: 5em auto; }
+  margin: 5em auto;
+  padding: 1em; }
   #personal h2 {
-    margin: 2em auto;
-    font-size: 1.8em; }
+    margin: 1.4em auto;
+    font-size: 2.2em;
+    letter-spacing: .15em;
+    transform: skew(-9deg); }
 
 #favOut {
   width: 70%;
@@ -302,14 +327,19 @@ nav {
 
 #favTitleOut {
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.4em;
   letter-spacing: .1em;
   font-style: italic;
-  margin: .7em auto; }
+  color: #f5eba9;
+  margin: 2.8em auto 1em; }
 
 #favTextOut {
   text-align: center;
-  margin-bottom: 4em; }
+  margin-bottom: 4em;
+  font-size: 1.4em; }
+  #favTextOut .director {
+    font-size: .8em;
+    font-style: italic; }
 
 #favBtn {
   display: block;
@@ -335,9 +365,13 @@ nav {
     box-shadow: 0 0 .4em snow;
     transform: translateY(-0.03em); }
 
+#catto {
+  max-width: 700px;
+  margin: 8em auto; }
+
 #lars {
   display: block;
-  width: 60%;
+  width: 90%;
   max-width: 600px;
   margin: 3em auto;
   border-radius: .2em;
@@ -364,7 +398,8 @@ nav {
   margin: auto;
   text-align: center; }
   #portfolioContainer h1 {
-    max-width: 550px; }
+    max-width: 600px;
+    font-size: 2.5em; }
 
 .workWrap {
   margin-bottom: 6em; }
@@ -386,7 +421,9 @@ nav {
     font-weight: 300;
     text-align: center;
     border-bottom: 1px double white;
-    font-size: 2.3em; }
+    font-size: 2.3em;
+    max-width: 450px;
+    margin: auto; }
   .workContent p {
     text-align: left;
     width: 85%;
@@ -404,7 +441,7 @@ nav {
   clear: both; }
 
 #workRef {
-  width: 60%;
+  width: 50%;
   margin: 1em auto; }
   #workRef #workRefLogo {
     float: left;
@@ -429,12 +466,10 @@ nav {
   margin-bottom: 5em; }
 
 #contactHeader {
-  width: 80%; }
-  #contactHeader svg {
-    width: 1em;
-    height: auto; }
-    #contactHeader svg path {
-      fill: #fdf8e5; }
+  max-width: 700px;
+  width: 80%;
+  margin-top: 1em;
+  font-size: 2.4em; }
 
 .grid {
   margin: 0 auto;
@@ -597,6 +632,11 @@ footer p {
     font-weight: 300;
     margin-left: .4em; }
 
+  #aboutTech {
+    margin: 4em auto; }
+    #aboutTech > h2 {
+      margin-left: 0; }
+
   #aboutPhoto {
     display: block; }
 
@@ -640,6 +680,9 @@ footer p {
 
   #favOut {
     width: 100%; }
+
+  #personal {
+    margin: 4em auto 20em; }
 
   .grid {
     display: none; }
