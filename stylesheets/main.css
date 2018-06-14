@@ -207,6 +207,9 @@ nav {
   font-weight: 300;
   margin-left: .4em; }
 
+.aboutBody > h2, #aboutTech > h2 {
+  font-size: 1.8em; }
+
 #aboutWhy {
   max-width: 800px;
   margin: 0 auto; }
@@ -463,12 +466,10 @@ nav {
   margin-bottom: 5em; }
 
 #contactHeader {
-  width: 80%; }
-  #contactHeader svg {
-    width: 1em;
-    height: auto; }
-    #contactHeader svg path {
-      fill: #fdf8e5; }
+  max-width: 700px;
+  width: 80%;
+  margin-top: 1em;
+  font-size: 2.4em; }
 
 .grid {
   margin: 0 auto;
