@@ -510,6 +510,7 @@ nav {
 // portfolio
 
 #portfolioContainer {
+    max-width: 1700px;
     width: 90%;
     margin: auto;
     text-align: center;
@@ -546,6 +547,7 @@ nav {
     }
     p {
         text-align: left;
+        max-width: 650px;
         width: 85%;
         margin: 1em auto;
         font-weight: 200;
@@ -556,7 +558,8 @@ nav {
     }
     ul {
         width: 60%;
-        margin-left: 2em;
+        max-width: 400px;
+        margin: auto;
         text-align: left;
     }
 }
@@ -598,7 +601,8 @@ nav {
 // contact  
 
 .contactMain {
-    margin-bottom: 5em;
+    margin: 1em auto 5em;
+    max-width: 1700px;
 }
 
 #contactHeader {
@@ -851,7 +855,7 @@ footer p {
     .workImage {
         float: none;
         width: 90%;
-        margin: auto;
+        margin: 6em auto 2em;
         img {
             display: block;
             margin: auto;
