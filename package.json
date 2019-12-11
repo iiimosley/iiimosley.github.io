@@ -23,12 +23,13 @@
     "grunt": "^1.0.2",
     "grunt-browserify": "^5.2.0",
     "grunt-contrib-jshint": "^1.1.0",
-    "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^3.1.0",
     "handlebars": "^4.0.11",
     "hbsfy": "^2.8.1",
     "jquery": "^3.3.1",
     "matchdep": "^2.0.0",
+    "node-sass": "^4.13.0",
     "request": "^2.85.0"
   }
 }

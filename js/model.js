@@ -1,38 +1,16 @@
 'use strict';
 
 const $ = require('jquery');
-// Access-Control-Allow-Origin: *;
+const { ob } = require('../lib/ob');
+const { fav } = require('../lib/fav');
+const { portfolio } = require('../lib/portfolio');
 
-// Response.headers
+const randomInt = (range) => Math.floor(Math.random() * +range);
 
 // data scraped from brianeno.needsyourhelp.org
 // cross origin issues prevented ajax calls
-module.exports.getStrategy = () => {
-    return new Promise((resolve, reject) => {
-        $.ajax({
-            url: '../lib/ob.json',
-        })
-        .done(strategy => resolve(strategy))
-        .fail(error => reject(error));
-    });
-};
+module.exports.getStrategy = () => ob[randomInt(ob.length)]; 
 
-module.exports.getFaves = () => {
-    return new Promise((resolve, reject) => {
-        $.ajax({
-            url: '../lib/fav.json',
-        })
-        .done(faves => resolve(faves))
-        .fail(error => reject(error));
-    });
-};
+module.exports.getFave = () => fav[randomInt(fav.length)];
 
-module.exports.getWork = () => {
-    return new Promise((resolve, reject) => {
-        $.ajax({
-            url: '../lib/portfolio.json',
-        })
-        .done(works => resolve(works))
-        .fail(error => reject(error));
-    });
-};
+module.exports.getWork = () => portfolio;

@@ -14,9 +14,7 @@ const aboutSection = require('../templates/about.hbs');
 const portfolioSection = require('../templates/portfolio.hbs');
 const contactSection = require('../templates/contact.hbs');
 
-const {getStrategy, getFaves, getWork} = require('./model');
-
-const randomInt = (range) => Math.floor(Math.random() * +range);
+const {getStrategy, getFave, getWork} = require('./model');
 
 const clearAll = () => {
     portfolio.fadeOut();
@@ -35,10 +33,9 @@ const aboutAppend = () => {
     about.fadeIn();
 };
 
-
 const homeView = () => {
     clearAll();
-    getStrategy().then(strategies => home.append(homeSection(strategies[randomInt(strategies.length)])));
+    home.append(homeSection(getStrategy()));
     home.fadeIn();
 };
 
@@ -49,11 +46,7 @@ const aboutView = () => {
 
 const portfolioView = () => {
     clearAll();
-    // portfolio.append(portfolioSection);
-    getWork().then(works => {
-        // let mapWorks = works.map(work=>$.parseHTML(work));
-        portfolio.append(portfolioSection({objects: works}));
-    });
+    portfolio.append(portfolioSection({objects: getWork()}));
     portfolio.fadeIn();
     $.parseHTML($(".workBrief"));
 };
@@ -65,12 +58,9 @@ const contactView = () => {
 };
 
 const newFact = () => {
-    getFaves()
-    .then(faves => {
-        let randomFav = faves[randomInt(faves.length)];
-        $('#favTitleOut').html(`${randomFav.title}`);
-        $('#favTextOut').html(`${randomFav.text}`);
-    });
+    let randomFav = getFave();
+    $('#favTitleOut').html(`${randomFav.title}`);
+    $('#favTextOut').html(`${randomFav.text}`);
 };
 
 module.exports = { aboutAppend, homeView, aboutView, portfolioView, contactView, newFact };
