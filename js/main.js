@@ -5,9 +5,6 @@ const Handlebars = require('hbsfy/runtime');
 
 const { aboutAppend, homeView, aboutView, portfolioView, contactView, newFact } = require('./view');
 
-
-
-
 (function pageLoad() {
     $('#aboutMobile>svg>path').css('fill', 'white');
     aboutAppend();
@@ -52,4 +49,3 @@ $(document).on('mouseup touchup', '#favBtn', newFact);
 $(document).on('mouseover touchstart', '.btnFlash', ()=>{
     $('.btnFlash').removeAttr('class', 'btnFlash');
 });
-
